@@ -1,0 +1,10 @@
+<h2>Scene Index Page</h2>
+
+
+<% @scenes.each do |scene| %>
+<div class="basic">
+      <h3><%= scene.sceneName %></h3><br>
+      <p><%= scene.description %></p>
+</div>
+
+<% end %>

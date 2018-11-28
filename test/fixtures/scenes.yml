@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sceneName: MyString
+  description: MyText
+  adventure: one
+
+two:
+  sceneName: MyString
+  description: MyText
+  adventure: two

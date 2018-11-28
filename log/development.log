@@ -383,3 +383,1688 @@ Processing by AdventuresController#show as HTML
 Completed 200 OK in 272ms (Views: 211.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:25:31 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.8ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 1214ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<#<Class:0xa140c60>:0xa007a60>):
+    11: 
+    12:   <body>
+    13: <nav class="navbar navbar-expand navbar-dark bg-dark">
+    14:       <a class="navbar-brand" href="<%= link_to home_path %>">Westmont Adventure</a>
+    15:       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    16:         <span class="navbar-toggler-icon"></span>
+    17:       </button>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__36147930_83897544'
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:26:17 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (1.7ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 376ms (Views: 272.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:27:19 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (1.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (C:/Users/walke/WestmontAdventure/Project3WestmontAdventure/app/views/layouts/application.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "Westmont Adventure" home_path );@output_buffer.safe_append...
+...                               ^):
+  
+app/views/layouts/application.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:27:31 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1813ms (Views: 1661.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:29:17 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 263ms (Views: 208.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:29:21 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 177ms (Views: 150.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:29:31 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (57.2ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Adventure:0x92d14b8>):
+    3: 
+    4: <% @adventures.each do |adventure| %>
+    5: <div class="well">
+    6:       <h3><%= adventure.title %></h3><br>
+    7:       <h6><%= adventure.creator %></h6>
+    8:       <p><%= adventure.description %></p>
+    9:       <%= link_to "Get Started", adventure_path(adventure), :class => 'btn btn-default' %>
+  
+app/views/adventures/index.html.erb:6:in `block in _app_views_adventures_index_html_erb___62470067_76785984'
+app/views/adventures/index.html.erb:4:in `_app_views_adventures_index_html_erb___62470067_76785984'
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:30:13 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 249ms (Views: 213.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:31:25 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 292ms (Views: 225.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:31:31 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 215ms (Views: 180.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures" for 127.0.0.1 at 2018-11-27 21:31:45 -0800
+Processing by AdventuresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QnInlkDXyqTdh3uSw/xTDjbGNib+00Gf80lk6vmFT8RgJnwYrBtrLyBMLTMB8uRlhWjbMB4mhPx1gi6NQACwFg==", "adventure"=>{"name"=>"Test Adventure ", "description"=>"adslgkjasdlg;khasl;fghasdl;fha;ls ksajfh;aslfhasl;fkhasl;fk saaslkfhasl;dfhk jal;sfk halaskfh ;alsfhk aaslkfh a;lsk a  ", "creator"=>"walker"}, "commit"=>"Save Adventure"}
+Unpermitted parameter: :name
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "adventures" ("description", "creator", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "adslgkjasdlg;khasl;fghasdl;fha;ls ksajfh;aslfhasl;fkhasl;fk saaslkfhasl;dfhk jal;sfk halaskfh ;alsfhk aaslkfh a;lsk a  "], ["creator", "walker"], ["created_at", "2018-11-28 05:31:45.356522"], ["updated_at", "2018-11-28 05:31:45.356522"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/2
+Completed 302 Found in 41ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:31:45 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 262ms (Views: 208.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:31:51 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 292ms (Views: 237.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:31:53 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 171ms (Views: 129.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:35:59 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (215.7ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_post_path' for #<#<Class:0x9f255f0>:0x9af2cf0>
+Did you mean?  edit_polymorphic_path):
+     7: <p><h5>Creator: </h5> <%= @adventure.creator %> </p>
+     8: 
+     9: 
+    10: <%= link_to "Edit", edit_post_path(@adventure), :class => 'btn
+    11:   btn-default' %>
+    12: 
+    13: <%= link_to 'Destroy', post_path(@adventure),
+  
+app/views/adventures/show.html.erb:10:in `_app_views_adventures_show_html_erb__640673639_83440056'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:36:27 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 282ms (Views: 219.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/adventures/2/edit" for 127.0.0.1 at 2018-11-27 21:36:31 -0800
+Processing by AdventuresController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/edit.html.erb within layouts/application
+  Rendered adventures/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 183ms (Views: 139.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/adventures/2" for 127.0.0.1 at 2018-11-27 21:36:35 -0800
+Processing by AdventuresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AlO9XqXehqIXRLbSnkX5q7Vsg+PV01+5jtjrZM9xcMPXFnnYdBDksgLgi0/da9bc/Bv+lmzA5N5z7cbbdl3MVg==", "adventure"=>{"name"=>"aaaaaaaaaaaaaaaaaaaaa", "description"=>"adslgkjasdlg;khasl;fghasdl;fha;ls ksajfh;aslfhasl;fkhasl;fk saaslkfhasl;dfhk jal;sfk halaskfh ;alsfhk aaslkfh a;lsk a  ", "creator"=>"walker"}, "commit"=>"Save Adventure", "id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `post_params' for #<AdventuresController:0xc33fc48>
+Did you mean?  to_param):
+  
+app/controllers/adventures_controller.rb:32:in `update'
+Started PATCH "/adventures/2" for 127.0.0.1 at 2018-11-27 21:37:07 -0800
+Processing by AdventuresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oXfPtyjfBvJGGXHDbRNMQ7ESuo/udfenaZdgWwZcuhaDI5Q5xBOnebvSJ2KvHfsoArxXmQ6AMsTvXCo8v9lFxA==", "adventure"=>{"name"=>"aaaaaaaaaaaaaaaaaaaaa", "description"=>"adslgkjasdlg;khasl;fghasdl;fha;ls ksajfh;aslfhasl;fkhasl;fk saaslkfhasl;dfhk jal;sfk halaskfh ;alsfhk aaslkfh a;lsk a  ", "creator"=>"walker"}, "commit"=>"Save Adventure", "id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: :name
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/2
+Completed 302 Found in 49ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:37:07 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 215ms (Views: 175.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:38:02 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 303ms (Views: 219.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:38:21 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 282ms (Views: 241.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:38:38 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 232ms (Views: 188.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:38:45 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 178ms (Views: 152.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:43:02 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 265ms (Views: 234.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:43:06 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 166ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:43:37 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"adventures"}, missing required keys: [:id]):
+    10:         <hr>
+    11:       
+    12: 
+    13:         <%= link_to "See Adventures »", adventure_path,
+    14:           :class => 'btn btn-primary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___595337450_86067936'
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:44:01 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (327.1ms)
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index_adventure_path' for #<#<Class:0x9fc77e8>:0xb3b4c70>
+Did you mean?  new_adventure_path
+               edit_adventure_path):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", index_adventure_path,
+    14:           :class => 'btn btn-primary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___595337450_94218528'
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:45:18 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (306.2ms)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `list_adventure_path' for #<#<Class:0x9fc77e8>:0xc45e928>):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", list_adventure_path,
+    14:           :class => 'btn btn-primary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___595337450_102954900'
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:45:32 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (360.3ms)
+Completed 500 Internal Server Error in 484ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `list_adventures_path' for #<#<Class:0x9fc77e8>:0xb920f50>):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", list_adventures_path,
+    14:           :class => 'btn btn-primary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___595337450_97061640'
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:46:41 -0800
+  
+SyntaxError (C:/Users/walke/WestmontAdventure/Project3WestmontAdventure/config/routes.rb:4: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  get '/adventures/', as 'index'
+                          ^):
+  
+config/routes.rb:4: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:46:49 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/adventures"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:46:59 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 236ms (Views: 195.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:47:07 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 163ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:47:29 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 282ms (Views: 238.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:47:30 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 200ms (Views: 157.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:47:33 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (491.7ms)
+Completed 500 Internal Server Error in 650ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures' for #<#<Class:0x98b55d0>:0x98b44c0>
+Did you mean?  adventures_url):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", adventures,
+    14:           :class => 'btn btn-primary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___595337450_80063880'
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:47:41 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 737ms (Views: 188.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:47:45 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 251ms (Views: 179.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:47:56 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 224ms (Views: 193.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:48:01 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 168ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:48:03 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 306ms (Views: 242.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:49:51 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 287ms (Views: 187.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:49:52 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 212ms (Views: 167.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/1/edit" for 127.0.0.1 at 2018-11-27 21:49:54 -0800
+Processing by AdventuresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/edit.html.erb within layouts/application
+  Rendered adventures/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 222ms (Views: 169.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/adventures/1" for 127.0.0.1 at 2018-11-27 21:49:59 -0800
+Processing by AdventuresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DMCj+M5zeosbwN8wF5Hpw6Oz4p8w7spAr3pLmvOCMnYulPh2Ir/bAOYLiZHVn16oEB0PidAbDyMpsQH9SgfNpA==", "id"=>"1"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "adventures" WHERE "adventures"."id" = ?[0m  [["id", 1]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:49:59 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 222ms (Views: 187.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:50:01 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 208ms (Views: 170.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 21:50:10 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 211ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScenes (20181128055511)
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "scenes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sceneName" varchar, "description" text, "adventure_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_ce89a3a207"
+FOREIGN KEY ("adventure_id")
+  REFERENCES "adventures" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_scenes_on_adventure_id" ON "scenes" ("adventure_id")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181128055511"]]
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_scenes_on_adventure_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_scenes_on_adventure_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_scenes_on_adventure_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_scenes_on_adventure_id' AND type='index'
+[0m
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:14:17 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/adventures/2/scenes"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:17:42 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/adventures/2/scenes"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:17:45 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/adventures/2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/adventures/" for 127.0.0.1 at 2018-11-27 22:17:54 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/adventures"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-27 22:18:11 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (530.3ms)
+Completed 500 Internal Server Error in 695ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_path' for #<#<Class:0x2f0d8e8>:0x288e388>):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", adventures_path,
+    14:           :class => 'btn btn-secondary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___751945402_24959400'
+Started GET "/" for 127.0.0.1 at 2018-11-27 22:18:20 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1481.1ms)
+Completed 500 Internal Server Error in 3599ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_path' for #<#<Class:0x2f0d8e8>:0x564c408>):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", adventures_path,
+    14:           :class => 'btn btn-secondary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___751945402_45246276'
+Started GET "/" for 127.0.0.1 at 2018-11-27 22:18:35 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2965.0ms)
+Completed 500 Internal Server Error in 5472ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_path' for #<#<Class:0x2f0d8e8>:0x5385c30>):
+    10:         <hr>
+    11: 
+    12: 
+    13:         <%= link_to "See Adventures »", adventures_path,
+    14:           :class => 'btn btn-secondary' %>
+    15: 
+    16:         <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___751945402_43791372'
+Started GET "/" for 127.0.0.1 at 2018-11-27 22:20:53 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (402.2ms)
+Completed 500 Internal Server Error in 639ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_path' for #<#<Class:0x59d8f88>:0x59b9fe0>):
+    10:         <hr>
+    11: 
+    12: 
+    13:   <%= link_to "See Adventures »", adventures_path,
+    14:     :class => 'btn btn-secondary' %>
+    15: 
+    16:   <%= link_to "Create your own adventure »", new_adventure_path,
+  
+app/views/pages/index.html.erb:13:in `_app_views_pages_index_html_erb___751945402_47106696'
+Started GET "/" for 127.0.0.1 at 2018-11-27 22:22:10 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1377ms (Views: 1334.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 22:22:30 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 438ms (Views: 332.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:22:32 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 315ms (Views: 242.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:23:23 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (648.5ms)
+Completed 500 Internal Server Error in 1089ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `scenes_path' for #<#<Class:0x3ba62d0>:0x5aa1190>):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18:   <%= link_to "Manage Scenes »", scenes_path,
+    19:     :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_48193824'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:27:02 -0800
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:27:02 -0800
+Processing by AdventuresController#show as HTML
+Processing by AdventuresController#show as HTML
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:27:02 -0800
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+Started GET "/" for 127.0.0.1 at 2018-11-27 22:27:02 -0800
+Processing by AdventuresController#show as HTML
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"id"=>"2"}
+Processing by PagesController#index as HTML
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendering adventures/show.html.erb within layouts/application
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1331.3ms)
+Completed 500 Internal Server Error in 2334ms (ActiveRecord: 0.0ms)
+
+
+  Rendered adventures/show.html.erb within layouts/application (1326.0ms)
+  
+Completed 500 Internal Server Error in 2397ms (ActiveRecord: 1.0ms)
+
+
+ActionView::Template::Error (undefined local variable or method `adventure_scenes' for #<#<Class:0x3ba62d0>:0xa15d658>
+Did you mean?  adventure_scenes_url
+               adventure_scenes_path
+               adventure_scene_url):
+  
+Completed 200 OK in 1736ms (Views: 1669.9ms | ActiveRecord: 0.0ms)
+
+
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes,
+    19:   :class => 'btn btn-secondary' %>
+ActionView::Template::Error (undefined local variable or method `adventure_scenes' for #<#<Class:0x3ba62d0>:0xa15c3f8>
+Did you mean?  adventure_scenes_url
+               adventure_scenes_path
+               adventure_scene_url):
+  
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes,
+    19:   :class => 'btn btn-secondary' %>
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_84602556'
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_84602556'
+  Rendered adventures/show.html.erb within layouts/application (1450.3ms)
+Completed 500 Internal Server Error in 2329ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventure_scenes' for #<#<Class:0x3ba62d0>:0xa1ec938>
+Did you mean?  adventure_scenes_url
+               adventure_scenes_path
+               adventure_scene_url):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_84602556'
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 22:27:13 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (1358.6ms)
+Completed 200 OK in 17695ms (Views: 16220.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:27:38 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (482.6ms)
+Completed 500 Internal Server Error in 634ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventure_scenes' for #<#<Class:0x3ba62d0>:0xe8d9c28>
+Did you mean?  adventure_scenes_url
+               adventure_scenes_path
+               adventure_scene_url):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_122081568'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:28:05 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (74.7ms)
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_87486144'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:28:16 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (42.5ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_101536344'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:28:39 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (421.5ms)
+Completed 500 Internal Server Error in 601ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_scenes_path' for #<#<Class:0x3ba62d0>:0x9a1a6d8>
+Did you mean?  adventure_scene_path
+               adventure_scenes_path
+               adventures_path
+               adventure_path
+               adventure_scene_url
+               adventure_scenes_url):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventures_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_80795268'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:28:56 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (84.6ms)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_82731576'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:29:14 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (456.8ms)
+Completed 500 Internal Server Error in 614ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_scenes_path' for #<#<Class:0x3ba62d0>:0xa03c2a8>
+Did you mean?  adventure_scene_path
+               adventure_scenes_path
+               adventures_path
+               adventure_path
+               adventure_scene_url
+               adventure_scenes_url):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventures_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_84010092'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:29:52 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.5ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (609.7ms)
+Completed 500 Internal Server Error in 1045ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `adventures_scenes' for #<#<Class:0x3ba62d0>:0xc47cbc8>
+Did you mean?  adventure_scene_url
+               adventure_scene_path
+               adventure_scenes_url):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventures_scenes,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb___149162445_103016688'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:31:38 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (74.1ms)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb__659853736_45048324'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:31:41 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (595.0ms)
+Completed 500 Internal Server Error in 2386ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb__659853736_36729372'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:33:34 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (3.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (48.8ms)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb__659853736_74841264'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:34:07 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (70.1ms)
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"scenes", :id=>"2"}, missing required keys: [:adventure_id]):
+    15:   data: {confirm: 'Are you sure?'},
+    16:   :class => 'btn btn-danger' %>
+    17: 
+    18: <%= link_to "Manage Scenes »", adventure_scenes_path,
+    19:   :class => 'btn btn-secondary' %>
+  
+app/views/adventures/show.html.erb:18:in `_app_views_adventures_show_html_erb__659853736_35842872'
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-27 22:34:40 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (2.6ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1087ms (Views: 954.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:35:03 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 632ms (Views: 432.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:36:38 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.7ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 506ms (Views: 435.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:36:47 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (99.0ms)
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Add A New Scene</h1>
+    2: 
+    3: <%= form_for :adventure, url: adventures_path do |f| %>
+    4: <% if @adventure.errors.any? %>
+    5:   <% @adventure.errors.full_messages.each do |msg| %>
+    6:     <div class="alert alert-danger"><%= msg %></div>
+    7:     <% end %>
+  
+app/views/scenes/new.html.erb:4:in `block in _app_views_scenes_new_html_erb___43706652_82992384'
+app/views/scenes/new.html.erb:3:in `_app_views_scenes_new_html_erb___43706652_82992384'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:37:31 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (555.1ms)
+Completed 500 Internal Server Error in 746ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `scenes_path' for #<#<Class:0x7090128>:0x9dceae0>):
+    1: <h1>Add A New Scene</h1>
+    2: 
+    3: <%= form_for :scene, url: scenes_path do |f| %>
+    4: <% if @scene.errors.any? %>
+    5:   <% @scene.errors.full_messages.each do |msg| %>
+    6:     <div class="alert alert-danger"><%= msg %></div>
+  
+app/views/scenes/new.html.erb:3:in `_app_views_scenes_new_html_erb___43706652_82737324'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:37:58 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 517ms (Views: 443.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:38:32 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qqZv6mEdXiy33wGL1ylbyDtL0PhF4O/reY5KZKwhSyaI8jRkjdH/p0oUVyoVJ+yjiOU97qUVKoj/RQADFaS09A==", "scene"=>{"sceneName"=>"Scene1 Enterance", "description"=>"You walk into class and it now you must decide what to do."}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `adventure_params' for #<ScenesController:0xaefbc58>
+Did you mean?  adventure_path):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:39:45 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qqZv6mEdXiy33wGL1ylbyDtL0PhF4O/reY5KZKwhSyaI8jRkjdH/p0oUVyoVJ+yjiOU97qUVKoj/RQADFaS09A==", "scene"=>{"sceneName"=>"Scene1 Enterance", "description"=>"You walk into class and it now you must decide what to do."}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 440ms (Views: 335.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:42:32 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 374ms (Views: 329.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:42:37 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 450ms (Views: 380.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:42:49 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZhPYkXckPVmqF2ytIs6wwQN0I5E1XgwrU0OatGM8QAdER4Mfm+ic0lfcOgzgwAeqsNrOh9WryUjViNDT2rm/1Q==", "scene"=>{"adventure_id"=>"2", "sceneName"=>"asasdfasf", "description"=>"asfdasdfas"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Unpermitted parameter: :adventure_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 444ms (Views: 409.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:42:57 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 449ms (Views: 364.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:43:01 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 429ms (Views: 366.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:47:12 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 482ms (Views: 400.1ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:47:18 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qkDUZD1OHMWugB1hsSWW6QwneAmBqyU3we7MXaCUtLWIFI/q0YK9TlNLS8BzKyGCv4mVH2Fe4FRHJYY6GRFLZw==", "scene"=>{"adventure"=>"2", "sceneName"=>"asfda", "description"=>"asfaf"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Unpermitted parameter: :adventure
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 273ms (Views: 261.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:47:41 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 467ms (Views: 367.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:47:48 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 412ms (Views: 353.7ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:47:51 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wThHP/dqniCCqprY7p1RXRLM7dnLEkrHP0FNXsbfHBHjbByxG6Y/q39hzHksk+Y2oWIAzyvnj6S5igc5f1rjww==", "scene"=>{"adventure"=>"2", "sceneName"=>"asfasf", "description"=>"asfa"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#78002916) expected, got "2" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:50:49 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (4.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 387ms (Views: 320.6ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:50:55 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kj+hr7QlZ53s9ronlxZCEUpZDM1pxWJMDcg0Nm+xWUGwa/ohWOnGFhE97IZVGPV6+ffh24kwpy+LA35R1jSmkw==", "scene"=>{"adventure"=>"#<Adventure:0xd7cdb70>", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#78002916) expected, got "#<Adventure:0xd7cdb70>" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:52:04 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 469ms (Views: 384.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:52:08 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8dI7nbJ4C6Tg5jAydhtB+BHqCOrM4NSA35yhV0WR6tXThmATXrSqLx0tZpO0FfaTokTl/CwVEeNZV+sw/BQVBw==", "scene"=>{"adventure"=>"2", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#78002916) expected, got "2" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:54:35 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 457ms (Views: 382.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:54:39 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eyf3+7HNCQMBrkYkLATMidPoh1D7hlkE4fNxPj2snWdZc6x1XQGoiPxlEIXuCnviYEZqRhtznGdnODtZhClitQ==", "scene"=>{"adventure"=>"#<Adventure:0xe99b338>", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#78002916) expected, got "#<Adventure:0xe99b338>" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:55:02 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 308ms (Views: 253.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:55:05 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k39xUY4umDNmZyy/VFdFoA5Hl9AiQuS5lxvGk+Ds6uWxKyrfYuI5uJuseh6WWfLLvel6xsK3IdoR0Iz0WWkVNw==", "scene"=>{"adventure"=>"2", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#78002916) expected, got "2" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:57:17 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.2ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 303ms (Views: 257.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:57:23 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XETjSPTBb6HHmCZ99CIjSY+GbKnZsjKcfuoP4wOD5nx+ELjGGA3OKjpTcNw2LJQiPCiBvzlH9//4IUWEugYZrg==", "scene"=>{"adventure_id"=>"2", "sceneName"=>"aa", "description"=>"aa"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Unpermitted parameter: :adventure_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 418ms (Views: 411.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:57:47 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 380ms (Views: 314.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 22:57:51 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 309ms (Views: 267.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 22:57:55 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fR1M8WiDBNtWlMTrPQnLHwsdGmT1KPTlbkXburm7oMlfSRd/hE+lUKtfkkr/B3x0uLP3chXdMYbojpHdAD5fGw==", "scene"=>{"adventure"=>"#<Adventure:0xe61f180>", "sceneName"=>"asfd", "description"=>"asf"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#78002916) expected, got "#<Adventure:0xe61f180>" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2//new" for 127.0.0.1 at 2018-11-27 22:59:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/adventures/2/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/adventures/2/new" for 127.0.0.1 at 2018-11-27 23:00:01 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/adventures/2/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:00:17 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:00:21 -0800
+  Rendered scenes/new.html.erb within layouts/application (16.8ms)
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (867.9ms)
+Completed 200 OK in 7644ms (Views: 7605.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3802ms (Views: 2921.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:00:32 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e4YwnjdExDorQqP2Zk7h+EG5S9hKii1SdF9h4sLsOL9Z0msQ24hlsdaJ9VekQFaT8hemzqp/6DHylCuFe2nHbQ==", "scene"=>{"adventure_id"=>"2", "sceneName"=>"124", "description"=>"141"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Unpermitted parameter: :adventure_id
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 310ms (Views: 295.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:04:01 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 493ms (Views: 403.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:04:05 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBpt5qlCQDPLFjcteynJWUU080ynCPXtVGONRc3bN16GTjZoRY7huDbdYYy5J34y9poeWkf9MI7SqMcidF7IjA==", "scene"=>{"adventure_id"=>"2", "sceneName"=>"asfa", "description"=>"asfa"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 476ms (Views: 462.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:04:26 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/index.html.erb within layouts/application
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  Rendered scenes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 410ms (Views: 346.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:06:32 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (91.9ms)
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for #<Class:0x94f2930>
+Did you mean?  tap):
+     9: 
+    10:   <p>
+    11:     <%= f.label :adventure %><br>
+    12:     <%= f.select :adventure, options_for_select(Adventure) %>
+    13: </p>
+    14: 
+    15: <p>
+  
+app/views/scenes/new.html.erb:12:in `block in _app_views_scenes_new_html_erb___43706652_78428184'
+app/views/scenes/new.html.erb:3:in `_app_views_scenes_new_html_erb___43706652_78428184'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:06:36 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (1306.3ms)
+Completed 500 Internal Server Error in 7267ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for #<Class:0x94f2930>
+Did you mean?  tap):
+     9: 
+    10:   <p>
+    11:     <%= f.label :adventure %><br>
+    12:     <%= f.select :adventure, options_for_select(Adventure) %>
+    13: </p>
+    14: 
+    15: <p>
+  
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:06:47 -0800
+app/views/scenes/new.html.erb:12:in `block in _app_views_scenes_new_html_erb___43706652_113506788'
+app/views/scenes/new.html.erb:3:in `_app_views_scenes_new_html_erb___43706652_113506788'
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (107.7ms)
+Completed 500 Internal Server Error in 2330ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for #<Class:0x94f2930>
+Did you mean?  tap):
+     9: 
+    10:   <p>
+    11:     <%= f.label :adventure %><br>
+    12:     <%= f.select :adventure, options_for_select(Adventure) %>
+    13: </p>
+    14: 
+    15: <p>
+  
+app/views/scenes/new.html.erb:12:in `block in _app_views_scenes_new_html_erb___43706652_113737572'
+app/views/scenes/new.html.erb:3:in `_app_views_scenes_new_html_erb___43706652_113737572'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:07:18 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (4.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 411ms (Views: 338.5ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:07:23 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u3avjUmi1tXYNvgO+ytU2SR2EZNSoiZJ2Cdpm4onqDyZIvQDpW53XiX9rq85JeOyl9j8hbJX4ype7CP8M6JX7g==", "scene"=>{"adventure"=>"#<Adventure:0x99c98b8>", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 381ms (Views: 367.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:11:01 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fv2GHyhxJrwLSUhSB9AFso+Mi31euQhCkm2bCzgLrcNcqd2RxL2HN/aCHvPF3rLZPCJma75MzSEUptFsgY5SEQ==", "scene"=>{"adventure"=>"#<Adventure:0x9303390>", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#58580376) expected, got "#<Adventure:0x9303390>" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:12:55 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (4.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 432ms (Views: 353.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/adventures/2/scenes/new" for 127.0.0.1 at 2018-11-27 23:13:28 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"2"}
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 389ms (Views: 318.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:13:32 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ZdxtW/CLZvUg/LNO3Y4KrLcXiTujNq+g996ulzVxzfLwyo7gw6MEClIpGz5eI9BAXKzMg55H90FFDDd5VA45Q==", "scene"=>{"adventure_id"=>"2", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Unpermitted parameter: :adventure_id
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 434ms (Views: 385.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:13:54 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zpm3QQLS8dL85FR0V31Vp5N+LQcBGhId9t6SXm8tJTjszezP7h5QWQEvAtWVc+LMINDAEeHv135wFdg51qja6g==", "scene"=>{"adventure_id"=>"2", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Unpermitted parameter: :adventure_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering scenes/new.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered scenes/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 325ms (Views: 317.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/adventures/2/scenes" for 127.0.0.1 at 2018-11-27 23:13:58 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+xy86G0wD85Ks0wxUkLa4JdG8bUVb/g6Y7ZLZdGoFgBuCl9TXhhtMThm5EHR7wAMfP20DSgeoNvRZNKLsNfig==", "scene"=>{"adventure"=>"#<Adventure:0xec67168>", "sceneName"=>"a", "description"=>"a"}, "commit"=>"Save Scene", "adventure_id"=>"2"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Adventure(#58580376) expected, got "#<Adventure:0xec67168>" which is an instance of String(#21363144)):
+  
+app/controllers/scenes_controller.rb:12:in `create'
