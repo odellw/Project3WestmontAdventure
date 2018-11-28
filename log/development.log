@@ -3333,3 +3333,284 @@ TypeError (no implicit conversion of Fixnum into String):
   
 app/controllers/scenes_controller.rb:6:in `+'
 app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:27:17 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 3[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 707ms (Views: 506.9ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/adventures/1/scenes" for 127.0.0.1 at 2018-11-28 11:27:34 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"1"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Adventure with 'id'=1):
+  
+app/controllers/scenes_controller.rb:3:in `index'
+Started GET "/adventures/" for 127.0.0.1 at 2018-11-28 11:27:43 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.1ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 265ms (Views: 225.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/adventures/3" for 127.0.0.1 at 2018-11-28 11:27:47 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdventure Load (1.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 341ms (Views: 280.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:27:50 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (0.8ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 3[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 404ms (Views: 333.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/adventures/3/scenes/new" for 127.0.0.1 at 2018-11-28 11:27:54 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 456ms (Views: 360.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:28:04 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVJxVcUp6AwwQJnebxVI8oi4iDDml4mPthtXP6dQQ+tzBirbKeVJh82Lz3+tG/+ZOxZlJgZiTOww0B1YHtW8OQ==", "scene"=>{"sceneName"=>"Adv 2 Scene", "description"=>"sd"}, "commit"=>"Save Scene", "adventure_id"=>"3"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "Adv 2 Scene"], ["description", "sd"], ["adventure_id", 3], ["created_at", "2018-11-28 19:28:04.673519"], ["updated_at", "2018-11-28 19:28:04.673519"]]
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 502ms (ActiveRecord: 31.0ms)
+
+
+  
+NoMethodError (undefined method `scene_url' for #<ScenesController:0xe74d478>
+Did you mean?  scene_params):
+  
+app/controllers/scenes_controller.rb:32:in `create'
+Started GET "/adventures/3/scenes/new" for 127.0.0.1 at 2018-11-28 11:29:02 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 444ms (Views: 324.7ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:29:05 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qvqWFl1Rm+GY5tJKKRpkFW9JOzafT3NkeZa+qXiWd/w/7HWtbnn5Huozejqqt775hPJ+jqI+K4XLRCdHGemDQ==", "scene"=>{"sceneName"=>"t", "description"=>"t"}, "commit"=>"Save Scene", "adventure_id"=>"3"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "t"], ["description", "t"], ["adventure_id", 3], ["created_at", "2018-11-28 19:29:05.849374"], ["updated_at", "2018-11-28 19:29:05.849374"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000show
+Completed 302 Found in 80ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:29:31 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 3[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (91.6ms)
+Completed 500 Internal Server Error in 513ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `sceneName' for #<Hash:0xe8d1b28>):
+    3: 
+    4: <% @scenes.each do |scene| %>
+    5: <div class="basic">
+    6:       <h3>Scene Name: <%= scene.sceneName %></h3><br>
+    7:       <p>Scene Description: <%= scene.description %></p>
+    8:       <p>Scene ID: <%= scene.id %></p>
+    9: 
+  
+app/views/scenes/index.html.erb:6:in `block in _app_views_scenes_index_html_erb__1022571048_122062032'
+app/views/scenes/index.html.erb:4:in `each'
+app/views/scenes/index.html.erb:4:in `_app_views_scenes_index_html_erb__1022571048_122062032'
+Started GET "/adventures/3/" for 127.0.0.1 at 2018-11-28 11:29:48 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 272ms (Views: 223.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:29:50 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 3[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (48.2ms)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `sceneName' for #<Hash:0x8ff1c48>):
+    3: 
+    4: <% @scenes.each do |scene| %>
+    5: <div class="basic">
+    6:       <h3>Scene Name: <%= scene.sceneName %></h3><br>
+    7:       <p>Scene Description: <%= scene.description %></p>
+    8:       <p>Scene ID: <%= scene.id %></p>
+    9: 
+  
+app/views/scenes/index.html.erb:6:in `block in _app_views_scenes_index_html_erb__1022571048_75239760'
+app/views/scenes/index.html.erb:4:in `each'
+app/views/scenes/index.html.erb:4:in `_app_views_scenes_index_html_erb__1022571048_75239760'
+Started GET "/adventures/" for 127.0.0.1 at 2018-11-28 11:30:36 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 426ms (Views: 360.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2" for 127.0.0.1 at 2018-11-28 11:30:39 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 469ms (Views: 348.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-28 11:30:42 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 2[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (97.0ms)
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `sceneName' for #<Hash:0xda44f98>):
+    3: 
+    4: <% @scenes.each do |scene| %>
+    5: <div class="basic">
+    6:       <h3>Scene Name: <%= scene.sceneName %></h3><br>
+    7:       <p>Scene Description: <%= scene.description %></p>
+    8:       <p>Scene ID: <%= scene.id %></p>
+    9: 
+  
+app/views/scenes/index.html.erb:6:in `block in _app_views_scenes_index_html_erb__1022571048_113884104'
+app/views/scenes/index.html.erb:4:in `each'
+app/views/scenes/index.html.erb:4:in `_app_views_scenes_index_html_erb__1022571048_113884104'
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-28 11:31:32 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 2[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (109.2ms)
+Completed 500 Internal Server Error in 497ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `sceneName' for #<Hash:0x9f0e6b8>):
+    3: 
+    4: <% @scenes.each do |scene| %>
+    5: <div class="basic">
+    6:       <h3>Scene Name: <%= scene.sceneName %></h3><br>
+    7:       <p>Scene Description: <%= scene.description %></p>
+    8:       <p>Scene ID: <%= scene.id %></p>
+    9: </div>
+  
+app/views/scenes/index.html.erb:6:in `block in _app_views_scenes_index_html_erb__1022571048_83387208'
+app/views/scenes/index.html.erb:4:in `each'
+app/views/scenes/index.html.erb:4:in `_app_views_scenes_index_html_erb__1022571048_83387208'
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-28 11:32:45 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 2[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 558ms (Views: 378.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/adventures/2/scenes" for 127.0.0.1 at 2018-11-28 11:33:25 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"2"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 2[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 599ms (Views: 442.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/" for 127.0.0.1 at 2018-11-28 11:33:33 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 487ms (Views: 423.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/3" for 127.0.0.1 at 2018-11-28 11:33:35 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 460ms (Views: 384.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:33:37 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 3[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 530ms (Views: 457.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/3/scenes" for 127.0.0.1 at 2018-11-28 11:35:01 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"3"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 3[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (74.8ms)
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :adventure_id=>nil, :controller=>"scenes"}, missing required keys: [:id], possible unmatched constraints: [:adventure_id]):
+     9:       <p>Scene ID: <%= scene.id %></p>
+    10: </div>
+    11: 
+    12: <%= link_to "See scene", adventure_scene_path(@scene),
+    13:   :class => 'btn btn-primary' %>
+    14: 
+    15: 
+  
+app/views/scenes/index.html.erb:12:in `block in _app_views_scenes_index_html_erb__1022571048_115306692'
+app/views/scenes/index.html.erb:4:in `each'
+app/views/scenes/index.html.erb:4:in `_app_views_scenes_index_html_erb__1022571048_115306692'

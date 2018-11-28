@@ -1,5 +1,7 @@
 <h2>Scene Index Page</h2>
 
+<%= link_to "Make a new Scene", new_adventure_scene_path,
+:class => 'btn btn-primary' %>
 
 <% @scenes.each do |scene| %>
 <div class="basic">
@@ -7,8 +9,12 @@
       <h3>Scene Name: <%= scene.sceneName %></h3><br>
       <p>Scene Description: <%= scene.description %></p>
       <p>Scene ID: <%= scene.id %></p>
+
+      <%= link_to "See scene", "http://localhost:3000/adventures/3/scenes/" + scene.id.to_s,
+        :class => 'btn btn-primary' %>
 </div>
 
+<hr>
 
 
 
