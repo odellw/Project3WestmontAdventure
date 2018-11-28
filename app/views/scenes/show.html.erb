@@ -1,0 +1,10 @@
+<h1>Adventure Show Page</h1>
+
+
+<p><h5>Name of Scene: </h5> <%= @scene.sceneName %> </p>
+<p><h5>Description: </h5> <%= @scene.description %> </p>
+<p><h5>ID: </h5> <%= @scene.id %> </p>
+
+
+<%= link_to "Edit", edit_adventure_scene_path(@scene),
+  :class => 'btn btn-primary' %>
