@@ -1,10 +1,56 @@
-<h1>Adventure Show Page</h1>
+<h1>Scene Show Page</h1>
 
-
+<hr>
 <p><h5>Name of Scene: </h5> <%= @scene.sceneName %> </p>
 <p><h5>Description: </h5> <%= @scene.description %> </p>
 <p><h5>ID: </h5> <%= @scene.id %> </p>
 
 
-<%= link_to "Edit", edit_adventure_scene_path(@scene),
+<%= link_to "Edit", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/edit",
   :class => 'btn btn-primary' %>
+
+
+<h3>Decisions To Make</h3>
+<div class="well">
+  <ul>
+
+
+<% @scene.decisions.each do |decision| %>
+
+    <strong><%= decision.decisionDescription %>: <%=comment.body %>  </strong>
+
+
+
+<% end %>
+  </ul>
+    </div>
+<br><br>
+
+<hr>
+<h3>Add a new Decision</h3>
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_area(:username,
+    {:class => 'form-control' }) %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area(:body,
+    {:class => 'form-control' }) %>
+  </p>
+  <p>
+  <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+
+  <% end %>
+
+
+
+
+
+
+
+
+
+<br>

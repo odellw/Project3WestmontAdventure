@@ -8,7 +8,6 @@ class ScenesController < ApplicationController
     @scenes = Scene.find_by_sql(sql)
     print "These are the Scenes"
     print @scenes
-
   end
 
   def new
@@ -38,6 +37,15 @@ class ScenesController < ApplicationController
 
   def show
     @scene = Scene.find(params[:id])
+  end
+
+  def update
+    @Scene = Scene.find(params[:id])
+    if(@Scene.update(scene_params))
+      redirect_to adventure_scenes_path
+    else
+      render 'new'
+    end
   end
 
   def edit
