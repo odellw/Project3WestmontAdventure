@@ -93,3 +93,293 @@ Migrating to CreateAdventures (20181128045021)
   [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-28 04:58:03.370246"], ["updated_at", "2018-11-28 04:58:03.370246"]]
   [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 20:58:28 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdventuresController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant AdventuresController::Adventures):
+  
+app/controllers/adventures_controller.rb:3:in `index'
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:00:19 -0800
+Processing by AdventuresController#index as HTML
+Completed 500 Internal Server Error in 257ms
+
+
+  
+NameError (undefined local variable or method `adventures' for #<AdventuresController:0x5d4f3e0>
+Did you mean?  adventures_url):
+  
+app/controllers/adventures_controller.rb:3:in `index'
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:01:15 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  Rendered adventures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 944ms (Views: 878.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:01:36 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 342ms (Views: 292.8ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:01:43 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  Rendered adventures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 361ms (Views: 299.1ms)
+
+
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:07:07 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (91.4ms)
+Completed 500 Internal Server Error in 413ms (ActiveRecord: 9.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Add Adventure</h1>
+    2: 
+    3: <%= form_for :adventure, url: adventures_path do |f| %>
+    4: <% if @post.errors.any? %>
+    5:   <% @post.errors.full_messages.each do |msg| %>
+    6:     <div class="alert alert-danger"><%= msg %></div>
+    7:     <% end %>
+  
+app/views/adventures/new.html.erb:4:in `block in _app_views_adventures_new_html_erb__1011044805_45567984'
+app/views/adventures/new.html.erb:3:in `_app_views_adventures_new_html_erb__1011044805_45567984'
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:07:36 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (59.3ms)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Add Adventure</h1>
+    2: 
+    3: <%= form_for :adventure, url: adventures_path do |f| %>
+    4: <% if @post.errors.any? %>
+    5:   <% @post.errors.full_messages.each do |msg| %>
+    6:     <div class="alert alert-danger"><%= msg %></div>
+    7:     <% end %>
+  
+app/views/adventures/new.html.erb:4:in `block in _app_views_adventures_new_html_erb__1011044805_85897884'
+app/views/adventures/new.html.erb:3:in `_app_views_adventures_new_html_erb__1011044805_85897884'
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:07:51 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (64.6ms)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Add Adventure</h1>
+    2: 
+    3: <%= form_for :adventure, url: adventures_path do |f| %>
+    4: <% if @post.errors.any? %>
+    5:   <% @post.errors.full_messages.each do |msg| %>
+    6:     <div class="alert alert-danger"><%= msg %></div>
+    7:     <% end %>
+  
+app/views/adventures/new.html.erb:4:in `block in _app_views_adventures_new_html_erb__1011044805_90069516'
+app/views/adventures/new.html.erb:3:in `_app_views_adventures_new_html_erb__1011044805_90069516'
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:08:27 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (133.1ms)
+Completed 500 Internal Server Error in 368ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for #<Adventure:0xb7fb730>):
+    14: 
+    15: <p>
+    16:   <%= f.label :desciption %><br>
+    17:   <%= f.text_area( :body, {:class => 'form-control'}) %>
+    18: </p>
+    19: 
+    20: <p>
+  
+app/views/adventures/new.html.erb:17:in `block in _app_views_adventures_new_html_erb__1011044805_96457776'
+app/views/adventures/new.html.erb:3:in `_app_views_adventures_new_html_erb__1011044805_96457776'
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:09:05 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (86.9ms)
+Completed 500 Internal Server Error in 390ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for #<Adventure:0xc14e680>):
+    14: 
+    15: <p>
+    16:   <%= f.label :description %><br>
+    17:   <%= f.text_area( :body, {:class => 'form-control'}) %>
+    18: </p>
+    19: 
+    20: <p>
+  
+app/views/adventures/new.html.erb:17:in `block in _app_views_adventures_new_html_erb__1011044805_101346480'
+app/views/adventures/new.html.erb:3:in `_app_views_adventures_new_html_erb__1011044805_101346480'
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:09:30 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 365ms (Views: 287.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/adventures" for 127.0.0.1 at 2018-11-27 21:09:49 -0800
+Processing by AdventuresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eOI9LLJw2dctA/HSHy/0aKSm/J5RNnrDpAk4z1cbuCBatmaiXrx4XNDIp3PdIUMDFwgRiLHDv6AiwnKo7p5H8g==", "adventure"=>{"name"=>"Adventure 1 \"The OG adventure\"", "description"=>"This is a test adventure", "creator"=>"Walker"}, "commit"=>"Save Adventure"}
+  Rendering adventures/create.html.erb within layouts/application
+  Rendered adventures/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 368ms (Views: 314.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:11:56 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 404ms (Views: 305.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/adventures" for 127.0.0.1 at 2018-11-27 21:12:01 -0800
+Processing by AdventuresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dLsgEUsMYTUs384opuy8hUgd1Bt4IggYcmtFNCI8kXlW73ufp8DAvtEUmIlk4gvu+7M5DZjXzXv0oA9Tm7luqw==", "adventure"=>{"name"=>"test", "description"=>"test", "creator"=>"test"}, "commit"=>"Save Adventure"}
+Completed 500 Internal Server Error in 376ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `adventure_params' for #<AdventuresController:0xa6a0a18>
+Did you mean?  adventure_path):
+  
+app/controllers/adventures_controller.rb:12:in `create'
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:13:11 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  Rendered adventures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 278ms (Views: 231.5ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:14:32 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 423ms (Views: 334.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:15:06 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 388ms (Views: 332.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:15:24 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 392ms (Views: 334.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-27 21:18:38 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 458ms (Views: 363.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/new" for 127.0.0.1 at 2018-11-27 21:18:41 -0800
+Processing by AdventuresController#new as HTML
+  Rendering adventures/new.html.erb within layouts/application
+  Rendered adventures/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 432ms (Views: 341.9ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/adventures" for 127.0.0.1 at 2018-11-27 21:18:47 -0800
+Processing by AdventuresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rJht/v1HBWPXTL9FTjiwAbdTCTPFa5Ez63e76sDAkOOOzDZwEYuk6CqH6eSMNgdqBP3kJSWeVFBtvPGNeUVvMQ==", "adventure"=>{"name"=>"A", "description"=>"A", "creator"=>"A"}, "commit"=>"Save Adventure"}
+Unpermitted parameter: :name
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "adventures" ("description", "creator", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "A"], ["creator", "A"], ["created_at", "2018-11-28 05:18:47.746125"], ["updated_at", "2018-11-28 05:18:47.746125"]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/1
+Completed 302 Found in 33ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:18:47 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (1.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 416ms (Views: 326.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:20:08 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (4.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (54.7ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Adventure Show Page</h1>
+    2: 
+    3: <h5>Title: </h5><h2> <%= @adventure.name %> </h2>
+    4: <p><h5>Body: </h5> <%= @adventure.description %> </p>
+    5: <p><h5>ID: </h5> <%= @adventure.id %> </p>
+    6: <p><h5>Creator: </h5> <%= @adventure.creator %> </p>
+  
+app/views/adventures/show.html.erb:3:in `_app_views_adventures_show_html_erb__640673639_91305036'
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:21:52 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 415ms (Views: 303.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:22:32 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 460ms (Views: 390.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:23:16 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 343ms (Views: 283.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/1" for 127.0.0.1 at 2018-11-27 21:23:18 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 272ms (Views: 211.2ms | ActiveRecord: 0.0ms)
+
+

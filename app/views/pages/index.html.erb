@@ -8,8 +8,13 @@
         The ultimate westmont themed create your own adventure.
       </p>
         <hr>
-        <a style="color: white;" class="btn btn-secondary" role="button">See Adventures »</a>
-        <a style="color: white;" class="btn btn-primary" role="button">Create your own adventure »</a>
+
+
+        <%= link_to "See Adventures »", adventures_path,
+          :class => 'btn btn-secondary' %>
+
+        <%= link_to "Create your own adventure »", new_adventure_path,
+          :class => 'btn btn-primary' %>
 
     </div>
   </div>

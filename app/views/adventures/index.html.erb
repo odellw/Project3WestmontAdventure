@@ -1,1 +1,12 @@
 <h2>Adventures Index Page</h2>
+
+
+<% @adventures.each do |adventure| %>
+<div class="basic">
+      <h3><%= adventure.name %></h3><br>
+      <h6><%= adventure.creator %></h6>
+      <p><%= adventure.description %></p>
+      <%= link_to "Get Started", adventure_path(adventure), :class => 'btn btn-default' %>
+</div>
+
+<% end %>
