@@ -16,9 +16,9 @@
 
 
 <% @scene.decisions.each do |decision| %>
-
-    <strong><%= decision.decisionDescription %>: <%=comment.body %>  </strong>
-
+  <li>  <p><%= decision.decisionDescription %>  </p><br>
+    <strong>Scene To Go To: <%=decision.sceneToGoTO %></strong>
+    </li>
 
 
 <% end %>
@@ -27,25 +27,9 @@
 <br><br>
 
 <hr>
-<h3>Add a new Decision</h3>
-<%= form_for ([@post, @post.comments.build]) do |f| %>
-  <p>
-    <%= f.label :username %><br>
-    <%= f.text_area(:username,
-    {:class => 'form-control' }) %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area(:body,
-    {:class => 'form-control' }) %>
-  </p>
-  <p>
-  <%= f.submit({:class => 'btn btn-primary'}) %>
-  </p>
 
-  <% end %>
-
-
+<%= link_to "Add a Decision", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
+:class => 'btn btn-primary' %>
 
 
 
