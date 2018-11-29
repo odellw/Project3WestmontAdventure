@@ -29,7 +29,7 @@ class ScenesController < ApplicationController
       print "this is the chosen scene name:"
       print @scene.sceneName
       if(@scene.save)
-        redirect_to adventure_scene_url
+        redirect_to adventure_scenes_path
       else
         render 'new'
       end

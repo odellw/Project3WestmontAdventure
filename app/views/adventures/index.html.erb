@@ -2,11 +2,12 @@
 
 
 <% @adventures.each do |adventure| %>
+  <hr>
 <div class="basic">
-      <h3><%= adventure.name %></h3><br>
-      <h6><%= adventure.creator %></h6>
-      <p><%= adventure.description %></p>
-      <%= link_to "Get Started", adventure_path(adventure), :class => 'btn btn-default' %>
+      <h3><%= adventure.name %></h3>
+      <h6> Creator: <%= adventure.creator %></h6>
+      <p> Description: <%= adventure.description %> </p>
+      <p><%= link_to "Get Started", adventure_path(adventure), :class => 'btn btn-default' %></p>
 </div>
 
 <% end %>

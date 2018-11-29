@@ -9,7 +9,7 @@ class DecisionsController < ApplicationController
   def create
     @decision = Decision.new(decision_params)
     @scene = Scene.find(params[:scene_id])
-    @decision = Decision.new(scene: @scene, decisionDescription: @decision.decisionDescription, sceneToGoTO: @decision.sceneToGoTO)
+    @decision = Decision.new(decisionDescription: @decision.decisionDescription, scene: @scene, sceneToGoTO: @decision.sceneToGoTO)
 
     print "this is the chosen decision scene:"
     print @decision.scene
@@ -26,6 +26,6 @@ class DecisionsController < ApplicationController
 
 
   private def decision_params
-    params.require(:decision).permit(:decisionDescription, :scene, :sceneToGoTo)
+    params.require(:decision).permit(:decisionDescription, :scene, :sceneToGoTO)
   end
 end

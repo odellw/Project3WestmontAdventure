@@ -6,4 +6,7 @@ Rails.application.routes.draw do
       resources :decisions
     end
   end
+
+  get '/player/:adventure_id', to: 'player#startadventure'
+
 end
