@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end
 
   get '/player/:adventure_id', to: 'player#startadventure'
+  get '/player/:adventure_id/:scene_id', to 'player#sceneplayer'
 
 end
