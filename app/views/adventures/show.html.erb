@@ -17,3 +17,5 @@
 
   <%= link_to 'Manage Scenes', adventure_scenes_path(@adventure),
     :class => 'btn btn-secondary' %>
+
+<%= link_to 'Play Adventure', '/player/' + @adventure.id.to_s %>
