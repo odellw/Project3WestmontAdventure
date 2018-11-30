@@ -7479,3 +7479,64 @@ Processing by PlayerController#startadventure as HTML
 Completed 200 OK in 247ms (Views: 185.6ms | ActiveRecord: 4.0ms)
 
 
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:14:37 -0800
+  
+SyntaxError (C:/Users/walke/WestmontAdventure/Project3WestmontAdventure/app/controllers/player_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/player_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:15:22 -0800
+  
+SyntaxError (C:/Users/walke/WestmontAdventure/Project3WestmontAdventure/app/controllers/player_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/player_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:15:43 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendered player/startadventure.html.erb within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Scene::ActiveRecord_Relation:0xc1b5610>
+Did you mean?  ids):
+     5: <p><small>ID: <%= @adventure.id %> </small>
+     6: <p><small>Creator: <%= @adventure.creator %> </small>
+     7: 
+     8: <%= link_to 'Start Your Magical Adventure', '/player/' + @adventure.id.to_s + '/' + @scene.id.to_s,
+     9: :class => 'btn btn-primary'
+    10:  %>
+  
+app/views/player/startadventure.html.erb:8:in `_app_views_player_startadventure_html_erb__1047780583_101557488'
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:17:52 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 303ms (Views: 229.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:17:54 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  Rendered player/sceneplayer.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 247ms (Views: 204.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:19:08 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  Rendered player/sceneplayer.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 250ms (Views: 214.8ms | ActiveRecord: 0.0ms)
+
+

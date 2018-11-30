@@ -1,1 +1,18 @@
 <h1>Play Scene</h1>
+
+<center>
+  <br>
+  <strong> <%= @scene.sceneName %>  </strong>
+  <p> <%= @scene.description %> </p>
+
+  <ul>
+    <% @scene.decisions.each do |decision| %>
+    <hr>
+    <li><p><%= decision.decisionDescription %> </p> </li>
+
+    <%= link_to 'Choose this decision', '/player/' + @adventure.id.to_s + '/' + decision.sceneToGoTO.to_s,
+    :class => 'btn btn-primary'
+     %>
+
+  <% end %>
+  </ul>
