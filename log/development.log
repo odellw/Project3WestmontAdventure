@@ -7418,3 +7418,64 @@ Processing by PlayerController#startadventure as HTML
 Completed 200 OK in 506ms (Views: 427.1ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/player/5" for 127.0.0.1 at 2018-11-30 15:02:22 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"5"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 5]]
+  Rendered player/startadventure.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 278ms (Views: 222.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:02:28 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 4]]
+  Rendered player/startadventure.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 294ms (Views: 252.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:03:08 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? ORDER BY "scenes"."id" ASC LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (31.9ms)
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Scene:0xa9fbab0>):
+     6: <p><small>Creator: <%= @adventure.creator %> </small>
+     7: 
+     8: <ul>
+     9:   <% @scenes.each do |scene| %>
+    10:   <div class="basic">
+    11:     <li> <strong><%= scene.id %></strong> : <%= scene.sceneName %> </li> 
+    12:   <% end %>
+  
+app/views/player/startadventure.html.erb:9:in `_app_views_player_startadventure_html_erb__1047780583_89118432'
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:03:31 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 4]]
+  Rendered player/startadventure.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 287ms (Views: 198.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:04:00 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendered player/startadventure.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 247ms (Views: 185.6ms | ActiveRecord: 4.0ms)
+
+

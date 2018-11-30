@@ -5,9 +5,6 @@
 <p><small>ID: <%= @adventure.id %> </small>
 <p><small>Creator: <%= @adventure.creator %> </small>
 
-<ul>
-  <% @scenes.each do |scene| %>
-  <div class="basic">
-    <li> <strong><%= scene.id %></strong> : <%= scene.sceneName %> </li> 
-  <% end %>
-</ul>
+<%= link_to 'Start Your Magical Adventure', '/player/' + @adventure.id.to_s + '/' + @scene.id.to_s,
+:class => 'btn btn-primary'
+ %>
