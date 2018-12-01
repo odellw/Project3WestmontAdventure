@@ -7540,3 +7540,456 @@ Processing by PlayerController#sceneplayer as HTML
 Completed 200 OK in 250ms (Views: 214.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/adventures/5/1" for 127.0.0.1 at 2018-11-30 15:20:44 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/adventures/5/1"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/player/5/1" for 127.0.0.1 at 2018-11-30 15:20:56 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"5", "scene_id"=>"1"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  Rendered player/sceneplayer.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 267ms (Views: 198.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:24:49 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  Rendered player/sceneplayer.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 243ms (Views: 192.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:25:23 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 210ms (Views: 177.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:27:01 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (2.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (1.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 422ms (Views: 315.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:27:12 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 330ms (Views: 263.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/player/4/16" for 127.0.0.1 at 2018-11-30 15:27:19 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"16"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=16):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/player/4/16" for 127.0.0.1 at 2018-11-30 15:27:22 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"16"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+Completed 404 Not Found in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=16):
+Started GET "/player/4/15" for 127.0.0.1 at 2018-11-30 15:27:24 -0800
+  
+Started GET "/player/4/15" for 127.0.0.1 at 2018-11-30 15:27:24 -0800
+Processing by PlayerController#sceneplayer as HTML
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/player/4/15" for 127.0.0.1 at 2018-11-30 15:27:25 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"15"}
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"15"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"15"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Started GET "/player/4/15" for 127.0.0.1 at 2018-11-30 15:27:26 -0800
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 404 Not Found in 65ms (ActiveRecord: 1.0ms)
+
+
+Processing by PlayerController#sceneplayer as HTML
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 404 Not Found in 50ms (ActiveRecord: 1.0ms)
+
+
+  
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"15"}
+Completed 404 Not Found in 48ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=15):
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=15):
+  
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=15):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Completed 404 Not Found in 20ms (ActiveRecord: 2.0ms)
+
+
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=15):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/player/4/15" for 127.0.0.1 at 2018-11-30 15:27:55 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"15"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 404 Not Found in 624ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=15):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/" for 127.0.0.1 at 2018-11-30 15:28:28 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 252ms (Views: 221.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-11-30 15:28:43 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 177ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/4" for 127.0.0.1 at 2018-11-30 15:28:47 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 231ms (Views: 189.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures/4/scenes" for 127.0.0.1 at 2018-11-30 15:28:50 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 4[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 212ms (Views: 181.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/3/scenes/10" for 127.0.0.1 at 2018-11-30 15:28:56 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"3", "id"=>"10"}
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered scenes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 183ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/player/4/16" for 127.0.0.1 at 2018-11-30 15:29:13 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"16"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=16):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:29:15 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:29:17 -0800
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (1.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (493.7ms)
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4444ms (Views: 2829.3ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 2799ms (Views: 1999.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:29:21 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 296ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:29:23 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (0.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (1.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 232ms (Views: 192.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/4/scenes/10/decisions/new" for 127.0.0.1 at 2018-11-30 15:29:49 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  Rendered decisions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 362ms (Views: 229.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/3/scenes/11" for 127.0.0.1 at 2018-11-30 15:30:02 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"3", "id"=>"11"}
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 11]]
+  Rendered scenes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 196ms (Views: 147.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/3/scenes/10" for 127.0.0.1 at 2018-11-30 15:30:05 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"3", "id"=>"10"}
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered scenes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 166ms (Views: 147.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/4/scenes/10/decisions/new" for 127.0.0.1 at 2018-11-30 15:30:06 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  Rendered decisions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 179ms (Views: 142.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/adventures/4/scenes/10/decisions?id=10" for 127.0.0.1 at 2018-11-30 15:30:15 -0800
+Processing by DecisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DL93ea4MZiL5cR+CUllo5kbkVcpzHjjXdrh0jyJKffjPwUduBpGyxbUgiUCx+F35ij+Mk9NA69M/TG87+8Xbvw==", "decision"=>{"decisionDescription"=>"Links to scene 11", "sceneToGoTO"=>"11"}, "commit"=>"Save Decision", "id"=>"10", "adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "decisions" ("decisionDescription", "scene_id", "sceneToGoTO", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["decisionDescription", "Links to scene 11"], ["scene_id", 10], ["sceneToGoTO", 11], ["created_at", "2018-11-30 23:30:15.156442"], ["updated_at", "2018-11-30 23:30:15.156442"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/4/scenes
+Completed 302 Found in 36ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/adventures/4/scenes" for 127.0.0.1 at 2018-11-30 15:30:15 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSelect * from scenes where adventure_id = 4[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 295ms (Views: 236.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/3/scenes/10" for 127.0.0.1 at 2018-11-30 15:30:25 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"3", "id"=>"10"}
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered scenes/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 248ms (Views: 198.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:30:32 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 247ms (Views: 206.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:30:33 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 201ms (Views: 169.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4/17" for 127.0.0.1 at 2018-11-30 15:30:35 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"17"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=17):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/player/4/17" for 127.0.0.1 at 2018-11-30 15:31:48 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"17"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Scene with 'id'=17):
+  
+app/controllers/player_controller.rb:9:in `sceneplayer'
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:31:52 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (1.0ms)
+Started GET "/player/4" for 127.0.0.1 at 2018-11-30 15:31:56 -0800
+Processing by PlayerController#startadventure as HTML
+  Parameters: {"adventure_id"=>"4"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ? LIMIT ?[0m  [["adventure_id", 4], ["LIMIT", 1]]
+Completed 200 OK in 3359ms (Views: 2865.7ms | ActiveRecord: 1.0ms)
+
+
+  Rendering player/startadventure.html.erb within layouts/application
+  Rendered player/startadventure.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 381ms (Views: 245.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4/10" for 127.0.0.1 at 2018-11-30 15:32:06 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"10"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 10]]
+  Rendered player/sceneplayer.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 190ms (Views: 169.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/player/4/11" for 127.0.0.1 at 2018-11-30 15:32:09 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"11"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 11]]
+  Rendered player/sceneplayer.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 246ms (Views: 166.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/player/4/11" for 127.0.0.1 at 2018-11-30 15:32:33 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"11"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (1.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (1.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 11]]
+  Rendered player/sceneplayer.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 359ms (Views: 266.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/player/4/12" for 127.0.0.1 at 2018-11-30 15:32:37 -0800
+Processing by PlayerController#sceneplayer as HTML
+  Parameters: {"adventure_id"=>"4", "scene_id"=>"12"}
+  [1m[36mAdventure Load (1.0ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mScene Load (0.0ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering player/sceneplayer.html.erb within layouts/application
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 12]]
+  Rendered player/sceneplayer.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 287ms (Views: 197.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 15:32:51 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 248ms (Views: 214.2ms | ActiveRecord: 0.0ms)
+
+

@@ -11,8 +11,7 @@
   </p>
   <p>
     <%= f.label :sceneToGoTO %><br>
-    <%= f.number_field(:sceneToGoTO,
-    {:class => 'form-control' }) %>
+    <%= f.select :sceneToGoTO, options_for_select(@scenes.collect{ |u| [u.sceneName, u.id] }) %>
   </p>
   <p>
   <%= f.submit({:class => 'btn btn-primary'}) %>

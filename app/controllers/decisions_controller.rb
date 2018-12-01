@@ -3,6 +3,9 @@ class DecisionsController < ApplicationController
   def new
     @scene = Scene.find(params[:scene_id])
     @adventure = Adventure.find(params[:adventure_id])
+    @scenes = Scene.where(adventure_id: @adventure.id)
+    print "SCENE NAMES:"
+    print @scenes
     @decision = Decision.new
   end
 
