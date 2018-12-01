@@ -15,9 +15,10 @@
 
   <% @scene.decisions.each do |decision| %>
   <hr>
-  <h6>Description </h6> <p><%= decision.decisionDescription %> </p>
+  <ul>
+  <li>Description </li> <p><%= decision.decisionDescription %> </p>
       <strong>Scene it links to: <%=decision.sceneToGoTO %></strong>
-
+</ul>
 
 
 <% end %>
