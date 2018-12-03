@@ -1,0 +1,30 @@
+<h1>Add Adventure</h1>
+
+<%= form_for :adventure, url: adventures_path do |f| %>
+<% if @adventure.errors.any? %>
+  <% @adventure.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field( :name, {:class => 'form-control'}) %>
+</p>
+
+<p>
+  <%= f.label :description %><br>
+  <%= f.text_area( :description, {:class => 'form-control'}) %>
+</p>
+
+<p>
+  <%= f.label :creator %><br>
+  <%= f.text_field( :creator, {:class => 'form-control'}) %>
+</p>
+
+
+<p>
+<%= f.submit({:class => 'btn btn-primary'}) %>
+</p>
+
+<% end %>

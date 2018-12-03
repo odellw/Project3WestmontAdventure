@@ -1,0 +1,10 @@
+<h1>Time to Start Adventure: <strong><%= @adventure.name %></strong></h1>
+
+
+<p> <%= @adventure.description %> </p>
+<p><small>ID: <%= @adventure.id %> </small>
+<p><small>Creator: <%= @adventure.creator %> </small>
+
+<%= link_to 'Start Your Magical Adventure', '/player/' + @adventure.id.to_s + '/' + @scene.id.to_s,
+:class => 'btn btn-primary'
+ %>

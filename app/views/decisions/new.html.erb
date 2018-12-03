@@ -1,0 +1,20 @@
+<h1>Decision New Page</h1>
+
+
+<h3>Add a new Decision</h3>
+
+<%= form_for :decision, :url => {:action => "create", :id => @scene} do |f| %>
+  <p>
+    <%= f.label :decisionDescription %><br>
+    <%= f.text_area(:decisionDescription,
+    {:class => 'form-control' }) %>
+  </p>
+  <p>
+    <%= f.label :sceneToGoTO %><br>
+    <%= f.select :sceneToGoTO, options_for_select(@scenes.collect{ |u| [u.sceneName, u.id] }) %>
+  </p>
+  <p>
+  <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+
+  <% end %>

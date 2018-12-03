@@ -1,0 +1,38 @@
+<h1>Scene Show Page</h1>
+
+<hr>
+<p><h5>Name of Scene: </h5> <%= @scene.sceneName %> </p>
+<p><h5>Description: </h5> <%= @scene.description %> </p>
+<p><h5>ID: </h5> <%= @scene.id %> </p>
+
+
+<%= link_to "Edit", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/edit",
+  :class => 'btn btn-primary' %>
+
+
+<h3>Decisions To Make</h3>
+<div class="well">
+
+  <% @scene.decisions.each do |decision| %>
+  <hr>
+  <h6>Description </h6> <p><%= decision.decisionDescription %> </p>
+      <strong>Scene it links to: <%=decision.sceneToGoTO %></strong>
+
+
+
+<% end %>
+    </div>
+<br><br>
+
+<hr>
+
+<%= link_to "Add a Decision", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
+:class => 'btn btn-primary' %>
+
+
+
+
+
+
+
+<br>
