@@ -17,9 +17,9 @@ To Do:
 
 3. Make it a web app (Kalie)
 
-4. $$Make button stay on page for decision (heater)$$
+4. ~~Make button stay on page for decision (heater)~~
 
-5. $$Button to return to list of scenes (heeeether)$$
+5. ~~Button to return to list of scenes (heeeether)~~
 
 6. HTML and CSS for everything (Maya and M'kya)
 
