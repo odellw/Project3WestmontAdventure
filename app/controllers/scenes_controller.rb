@@ -53,6 +53,14 @@ class ScenesController < ApplicationController
       @adventure = Adventure.find(params[:adventure_id])
     end
 
+  def destroy
+    print "--- delete scene ---"
+    @scene = Scene.find(params[:id])
+    @scene.destroy
+    redirect_to home_path
+  end
+
+
   private def scene_params
     params.require(:scene).permit(:adventure, :sceneName, :description)
   end
