@@ -3,6 +3,15 @@
 <%= link_to "Make a new Scene", new_adventure_scene_path,
 :class => 'btn btn-primary' %>
 
+<%= link_to "Back to Adventure Show Page", adventure_path(@adventure),
+  :class => 'btn btn-primary' %>
+
+
+<br><br>
+
+
+
+
 <% @scenes.each do |scene| %>
 <div class="basic">
       <h3>Adventure: <%= scene.adventure_id %></h3><br>
@@ -10,7 +19,7 @@
       <p>Scene Description: <%= scene.description %></p>
       <p>Scene ID: <%= scene.id %></p>
 
-      <%= link_to "See scene", "http://localhost:3000/adventures/3/scenes/" + scene.id.to_s,
+      <%= link_to "See scene", "http://localhost:3000/adventures/" + scene.adventure_id.to_s + "/scenes/" + scene.id.to_s,
         :class => 'btn btn-primary' %>
 </div>
 
