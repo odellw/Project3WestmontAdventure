@@ -21,7 +21,7 @@ class DecisionsController < ApplicationController
     print "this is the chosen scene to go to"
     print @decision.sceneToGoTO
     if(@decision.save)
-      redirect_to adventure_scenes_path
+      redirect_to adventure_scenes_path + "/" + @scene.id.to_s
     else
       render 'new'
     end

@@ -1,16 +1,25 @@
-<h2>Adventures Index Page</h2>
-
-
-<% @adventures.each do |adventure| %>
-  <hr>
-<div class="container">
-      <h3><%= adventure.name %></h3>
-      <h6> Creator: <%= adventure.creator %></h6>
-      <p> Description: <%= adventure.description %> </p>
-      <p><%= link_to "Manage Adventure", adventure_path(adventure), :class => 'btn btn-default' %></p>
-      <%= link_to 'Play Adventure', '/player/' + adventure.id.to_s %>
+<div class="maindiv">
+  <br><br>
+  <center>
+  <h2>Explore our Adventures</h2>
+  <br>
+  <%= link_to "Back to Home", home_path,
+    :class => 'btn btn-primary' %>
 </div>
 
-
-
-<% end %>
+<center>
+  <br>
+<div class="AdventuresDiv">
+  <% @adventures.each do |adventure| %>
+    <hr>
+  <div style="padding: 2vh;" class="container">
+        <h3><%= adventure.name %></h3>
+        <h6> Creator: <%= adventure.creator %></h6>
+        <p> Description: <%= adventure.description %> </p>
+        <div class="">
+          <%= link_to "Manage Adventure", adventure_path(adventure), :class => 'btn btn-secondary' %>
+          <%= link_to 'Play Adventure', '/player/' + adventure.id.to_s, :class => 'btn btn-success' %>
+        </div>
+  </div>
+  <% end %>
+</div>

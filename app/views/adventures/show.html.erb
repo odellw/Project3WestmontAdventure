@@ -1,21 +1,36 @@
-<h1>Adventure Show Page</h1>
+
+<br><br>
+<center>
+<h1><%= @adventure.name %></h1>
+<small>Created by:  <%= @adventure.creator %> </small>
+<hr>
+
+<div style="background-color: #f2f2f2; border-radius: 20px; height: 20vh; width: 50vw; padding: 20px;" class="descriptionDiv">
+  <%= @adventure.description %>
+</div>
+
+<br>
+<hr>
+<div class="Buttons">
+  <%= link_to "Edit", edit_adventure_path(@adventure),
+    :class => 'btn btn-primary' %>
+
+  <%= link_to 'Destroy', adventure_path(@adventure),
+    method: :delete,
+    data: {confirm: 'Are you sure?'},
+    :class => 'btn btn-danger' %>
+
+    <%= link_to 'Manage Scenes', adventure_scenes_path(@adventure),
+      :class => 'btn btn-secondary' %>
+
+  <%= link_to 'Play Adventure', '/player/' + @adventure.id.to_s, :class => 'btn btn-success' %>
 
 
-<p><h5>Name: </h5> <%= @adventure.name %> </p>
-<p><h5>Body: </h5> <%= @adventure.description %> </p>
-<p><h5>ID: </h5> <%= @adventure.id %> </p>
-<p><h5>Creator: </h5> <%= @adventure.creator %> </p>
+</div>
 
 
-<%= link_to "Edit", edit_adventure_path(@adventure),
+
+<br><br>
+
+<%= link_to "Back to All Adventures", "/adventures",
   :class => 'btn btn-primary' %>
-
-<%= link_to 'Destroy', adventure_path(@adventure),
-  method: :delete,
-  data: {confirm: 'Are you sure?'},
-  :class => 'btn btn-danger' %>
-
-  <%= link_to 'Manage Scenes', adventure_scenes_path(@adventure),
-    :class => 'btn btn-secondary' %>
-
-<%= link_to 'Play Adventure', '/player/' + @adventure.id.to_s %>
