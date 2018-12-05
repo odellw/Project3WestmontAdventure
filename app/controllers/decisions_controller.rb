@@ -27,6 +27,13 @@ class DecisionsController < ApplicationController
     end
   end
 
+  def destroy
+    print "--- delete decision ---"
+    @decision = Decision.find(params[:id])
+    @decision.destroy
+    redirect_to home_path
+  end
+
 
   private def decision_params
     params.require(:decision).permit(:decisionDescription, :scene, :sceneToGoTO)
