@@ -1,0 +1,26 @@
+<h1>Decision Edit Page</h1>
+
+
+<h3>Edit Decision</h3>
+<h5>
+  Context:
+  <%=@scene.sceneName %> , <%=@scene.description%>
+  </h5>
+
+
+
+<%= form_for :decision, url: adventure_scenes_path + "/decisions/" + decision.id.to_s do |f| %>
+  <p>
+    <%= f.label :Decision_description %><br>
+    <%= f.text_area(:decisionDescription,
+    {:class => 'form-control' }) %>
+  </p>
+  <p>
+    <%= f.label :Scene_to_go_to %><br>
+    <%= f.select :sceneToGoTO, options_for_select(@scenes.collect{ |u| [u.sceneName, u.id] }) %>
+  </p>
+  <p>
+  <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+
+  <% end %>

@@ -34,6 +34,24 @@ class DecisionsController < ApplicationController
     redirect_to home_path
   end
 
+  def edit
+      @decision = Decision.find(params[:id])
+      @scene = Scene.find(params[:id])
+      @adventure = Adventure.find(params[:adventure_id])
+  end
+
+  def show
+    @decision = Decision.find(params[:id])
+  end
+
+  def update
+    @Decision = Decision.find(params[:id])
+    if(@Decision.update(decision_params))
+      redirect_to @decision
+    else
+      render 'new'
+    end
+  end
 
   private def decision_params
     params.require(:decision).permit(:decisionDescription, :scene, :sceneToGoTO)
