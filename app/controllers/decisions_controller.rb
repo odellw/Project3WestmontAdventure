@@ -31,12 +31,12 @@ class DecisionsController < ApplicationController
     print "--- delete decision ---"
     @decision = Decision.find(params[:id])
     @decision.destroy
-    redirect_to home_path
+    redirect_to adventure_scenes_path
   end
 
   def edit
       @decision = Decision.find(params[:id])
-      @scene = Scene.find(params[:id])
+      @scene = Scene.find(params[:scene_id])
       @adventure = Adventure.find(params[:adventure_id])
   end
 
@@ -45,7 +45,7 @@ class DecisionsController < ApplicationController
   end
 
   def update
-    @Decision = Decision.find(params[:id])
+    @Decision = Decision.find(params[:decision_id])
     if(@Decision.update(decision_params))
       redirect_to @decision
     else

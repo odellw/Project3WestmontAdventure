@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   get '/player/:adventure_id', to: 'player#startadventure'
   get '/player/:adventure_id/:scene_id', to: 'player#sceneplayer'
+  post '/adventures/:adventure_id/scenes/:scene_id/decisions/:decision_id/edit', to: 'decisions#update'
 
 end

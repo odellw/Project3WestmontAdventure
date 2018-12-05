@@ -9,7 +9,7 @@
 
 
 
-<%= form_for :decision, url: adventure_scenes_path + "/decisions/" + decision.id.to_s do |f| %>
+<%= form_for :decision, :url => {:action => "edit", :id => @scene} do |f| %>
   <p>
     <%= f.label :Decision_description %><br>
     <%= f.text_area(:decisionDescription,
@@ -17,7 +17,7 @@
   </p>
   <p>
     <%= f.label :Scene_to_go_to %><br>
-    <%= f.select :sceneToGoTO, options_for_select(@scenes.collect{ |u| [u.sceneName, u.id] }) %>
+    <%= f.select :sceneToGoTO, options_for_select(@adventure.scenes.collect{ |u| [u.sceneName, u.id] }) %>
   </p>
   <p>
   <%= f.submit({:class => 'btn btn-primary'}) %>
