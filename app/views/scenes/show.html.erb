@@ -6,7 +6,7 @@
 <p><h5>ID: </h5> <%= @scene.id %> </p>
 
 
-<%= link_to "Edit", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/edit",
+<%= link_to "Edit", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/edit",
   :class => 'btn btn-primary' %>
 
 
@@ -26,10 +26,10 @@
       <strong>Scene it links to: <%=decision.sceneToGoTO %></strong>
 </ul>
 
-<%= link_to "Edit", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s + "/edit",
+<%= link_to "Edit", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s + "/edit",
   :class => 'btn btn-primary' %>
 
-<%= link_to 'Destroy', "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s,
+<%= link_to 'Destroy', "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s,
   method: :delete,
   data: {confirm: 'Are you sure?'},
   :class => 'btn btn-danger' %>
@@ -40,7 +40,7 @@
 
 <hr>
 
-<%= link_to "Add a Decision", "http://localhost:3000/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
+<%= link_to "Add a Decision", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
 :class => 'btn btn-primary' %>
 
 
