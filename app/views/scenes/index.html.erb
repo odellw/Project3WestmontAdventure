@@ -23,10 +23,10 @@
       <p>Scene Description: <%= scene.description %></p>
       <p>Scene ID: <%= scene.id %></p>
 
-      <%= link_to "See scene", "http://localhost:3000/adventures/" + scene.adventure_id.to_s + "/scenes/" + scene.id.to_s,
+      <%= link_to "See scene", "/adventures/" + scene.adventure_id.to_s + "/scenes/" + scene.id.to_s,
         :class => 'btn btn-primary' %>
 
-      <%= link_to 'Destroy', "http://localhost:3000/adventures/3/scenes/" + scene.id.to_s,
+      <%= link_to 'Destroy', "/adventures/3/scenes/" + scene.id.to_s,
         method: :delete,
         data: {confirm: 'Are you sure?'},
         :class => 'btn btn-danger' %>
