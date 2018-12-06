@@ -26,6 +26,7 @@
       <%= link_to "See scene", "/adventures/" + scene.adventure_id.to_s + "/scenes/" + scene.id.to_s,
         :class => 'btn btn-primary' %>
 
+
       <%= link_to 'Destroy', "/adventures/" + scene.adventure_id.to_s + "/scenes/" + scene.id.to_s,
         method: :delete,
         data: {confirm: 'Are you sure?'},
