@@ -57,7 +57,7 @@ class ScenesController < ApplicationController
     print "--- delete scene ---"
     @scene = Scene.find(params[:id])
     @scene.destroy
-    redirect_to home_path
+    redirect_to adventure_scenes_path
   end
 
 

@@ -26,6 +26,13 @@
       <strong>Scene it links to: <%=decision.sceneToGoTO %></strong>
 </ul>
 
+<%= link_to "Edit", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s + "/edit",
+  :class => 'btn btn-primary' %>
+
+<%= link_to 'Destroy', "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s,
+  method: :delete,
+  data: {confirm: 'Are you sure?'},
+  :class => 'btn btn-danger' %>
 
 <% end %>
     </div>

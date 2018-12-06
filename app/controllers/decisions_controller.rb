@@ -31,9 +31,27 @@ class DecisionsController < ApplicationController
     print "--- delete decision ---"
     @decision = Decision.find(params[:id])
     @decision.destroy
-    redirect_to home_path
+    redirect_to adventure_scenes_path
   end
 
+  def edit
+      @decision = Decision.find(params[:id])
+      @scene = Scene.find(params[:scene_id])
+      @adventure = Adventure.find(params[:adventure_id])
+  end
+
+  def show
+    @decision = Decision.find(params[:id])
+  end
+
+  def update
+    @Decision = Decision.find(params[:decision_id])
+    if(@Decision.update(decision_params))
+      redirect_to @decision
+    else
+      render 'new'
+    end
+  end
 
   private def decision_params
     params.require(:decision).permit(:decisionDescription, :scene, :sceneToGoTO)
