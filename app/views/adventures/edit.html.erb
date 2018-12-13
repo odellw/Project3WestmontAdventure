@@ -1,6 +1,6 @@
 <center>
 <h1>Edit Adventure</h1>
-<div class="container"
+
 
 <%= form_for :adventure, url: adventure_path(@adventure), method: :patch do |f| %>
 <% if @adventure.errors.any? %>
@@ -9,7 +9,7 @@
     <% end %>
   <% end %>
 
-
+<div class="container">
   <p>
     <object align="left">
     <%= f.label :name %><br>
@@ -35,7 +35,7 @@
   <p>
   <%= f.submit({:class => 'btn btn-primary'}) %>
   </p>
-
-<% end %>
 </div>
+<% end %>
+
 </center>

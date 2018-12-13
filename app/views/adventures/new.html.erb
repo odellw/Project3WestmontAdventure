@@ -2,14 +2,15 @@
 <h1>New Adventure</h1>
 </center>
 
-<div class="container">
+
 <%= form_for :adventure, url: adventures_path do |f| %>
 <% if @adventure.errors.any? %>
   <% @adventure.errors.full_messages.each do |msg| %>
     <div class="alert alert-danger"><%= msg %></div>
     <% end %>
   <% end %>
-
+  
+<div class="container">
 <p>
   <%= f.label :name %><br>
   <%= f.text_field( :name, {:class => 'form-control'}) %>
