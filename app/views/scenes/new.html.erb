@@ -1,4 +1,8 @@
+<br><br>
+<center>
 <h1>Add A New Scene</h1>
+
+
 
 <%= form_for :scene, url: adventure_scenes_path do |f| %>
 <% if @scene.errors.any? %>
@@ -6,7 +10,7 @@
     <div class="alert alert-danger"><%= msg %></div>
     <% end %>
   <% end %>
-
+<div class="container">
 <p>
   <%= f.label :sceneName %><br>
   <%= f.text_field( :sceneName, {:class => 'form-control'}) %>
@@ -17,8 +21,12 @@
   <%= f.text_area( :description, {:class => 'form-control'}) %>
 </p>
 
+
+
 <p>
 <%= f.submit({:class => 'btn btn-primary'}) %>
 </p>
 
 <% end %>
+</div>
+</center>

@@ -1,8 +1,10 @@
 <br>
-<h2>Scenes</h2>
+<center>
+<h1>Scenes</h1>
 <hr>
 
-<div class="">
+
+<div class="basic">
   <%= link_to "Make a new Scene", new_adventure_scene_path,
   :class => 'btn btn-success' %>
 
@@ -12,15 +14,15 @@
 </div>
 
 
-<br><br>
-
-
+<br><br><br>
 
 
 <% @scenes.each do |scene| %>
-<div class="basic">
-      <h3>Scene Name: <%= scene.sceneName %></h3><br>
-      <p>Scene Description: <%= scene.description %></p>
+<div class="list-group-item">
+  <div class="container">
+      <h3><strong> Scene Name: </strong> <%= scene.sceneName %></h3><br>
+      <p><strong>Scene Description:</strong> <%= scene.description %></p>
+      </div>
       <p>Scene ID: <%= scene.id %></p>
 
       <%= link_to "See scene", "/adventures/" + scene.adventure_id.to_s + "/scenes/" + scene.id.to_s,

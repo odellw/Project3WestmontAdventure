@@ -1,4 +1,7 @@
-<h1>Add Adventure</h1>
+<center>
+<h1>New Adventure</h1>
+</center>
+
 
 <%= form_for :adventure, url: adventures_path do |f| %>
 <% if @adventure.errors.any? %>
@@ -6,7 +9,8 @@
     <div class="alert alert-danger"><%= msg %></div>
     <% end %>
   <% end %>
-
+  
+<div class="container">
 <p>
   <%= f.label :name %><br>
   <%= f.text_field( :name, {:class => 'form-control'}) %>
@@ -22,9 +26,11 @@
   <%= f.text_field( :creator, {:class => 'form-control'}) %>
 </p>
 
-
+</div>
+<center>
 <p>
 <%= f.submit({:class => 'btn btn-primary'}) %>
 </p>
 
 <% end %>
+</center>

@@ -1,5 +1,14 @@
+<head>
+  <style>
+    body{
+      background-color: #c2c2d6;
+    }
+    </style>
+</head>
 
 <main role="main">
+  <center>
+
   <div class="jumbotron">
     <div class="col-sm-8 mx-auto">
       <h1>Welcome to Westmont Create Your Own Adventure!</h1>
@@ -11,12 +20,13 @@
 
 
   <%= link_to "Edit and Play Adventures »", adventures_path,
-    :class => 'btn btn-secondary' %>
+    :class => 'btn btn-primary' %>
 
   <%= link_to "Create your own adventure »", new_adventure_path,
-    :class => 'btn btn-primary' %>
+    :class => 'btn btn-success' %>
 
 
     </div>
   </div>
+  </center>
 </main>

@@ -1,10 +1,10 @@
 <div class="maindiv">
   <br><br>
   <center>
-  <h2>Explore our Adventures</h2>
+  <h1>Explore Adventures</h1>
   <br>
   <%= link_to "Back to Home", home_path,
-    :class => 'btn btn-primary' %>
+    :class => 'btn btn-secondary' %>
 </div>
 
 <center>
@@ -17,7 +17,7 @@
         <h6> Creator: <%= adventure.creator %></h6>
         <p> Description: <%= adventure.description %> </p>
         <div class="">
-          <%= link_to "Manage Adventure", adventure_path(adventure), :class => 'btn btn-secondary' %>
+          <%= link_to "Manage Adventure", adventure_path(adventure), :class => 'btn btn-primary' %>
           <%= link_to 'Play Adventure', '/player/' + adventure.id.to_s, :class => 'btn btn-success' %>
         </div>
   </div>
