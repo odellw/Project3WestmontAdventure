@@ -1,10 +1,15 @@
+<br><br>
 <center>
 <h2>Add a new Decision</h2>
-<h5>
-  Context:
+<br>
+<div class="container">
+<p>
+  <strong> Context: </strong>
   <%=@scene.sceneName %> , <%=@scene.description%>
-  </h5>
+  </p>
+  </div>
 </center>
+<br>
 
 <div class="container">
 <%= form_for :decision, :url => {:action => "create", :id => @scene} do |f| %>

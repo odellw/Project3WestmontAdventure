@@ -1,34 +1,39 @@
 <center>
 <hr>
-<h1>Scene Page</h1>
-<p><h2>Name of Scene:  <%= @scene.sceneName %> </h2></p>
-<p><h3>Description:  <%= @scene.description %> </h7></p>
+<div class="container">
+<h1> <strong> Name of Scene: </strong> <%= @scene.sceneName %> </h1>
+<br>
+<h5> <strong> Description:  </strong>  <%= @scene.description %> </h5>
+  </div>
+  <br>
 
 
 
 <%= link_to "Edit", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/edit",
   :class => 'btn btn-primary' %>
 
+  <%= link_to "Add a Decision", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
+  :class => 'btn btn-primary' %>
 
-  <%= link_to "Back to Scenes", adventure_scenes_path,
-    :class => 'btn btn-primary' %>
 
-<br><br>
-
-<%= link_to "Add a Decision", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
-:class => 'btn btn-primary' %>
 
 <br><br>
 
-<h3>Decisions To Make</h3>
-<div class="list-group-item">
+<%= link_to "Back to Scenes", adventure_scenes_path,
+  :class => 'btn btn-secondary' %>
+
+<br><br><br>
+
+<div class="container">
+<h2><strong>Decisions To Make </strong></h2>
 
   <% @scene.decisions.each do |decision| %>
   <hr>
-  <ul>
-  <li>Description </li> <p><%= decision.decisionDescription %> </p>
-      <strong>Scene it links to: <%=decision.sceneToGoTO %></strong>
-</ul>
+
+  <h5><%= decision.decisionDescription %> </h5>
+  <h8> Scene it links to: <%=decision.sceneToGoTO %></h8>
+  <br><br>
+
 
 <%= link_to "Edit", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/" + decision.id.to_s + "/edit",
   :class => 'btn btn-primary' %>
@@ -37,9 +42,9 @@
   method: :delete,
   data: {confirm: 'Are you sure?'},
   :class => 'btn btn-danger' %>
-
+</div>
 <% end %>
-    </div>
+
 <br><br>
 
 <hr>
