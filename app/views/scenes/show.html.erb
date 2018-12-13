@@ -1,9 +1,9 @@
-<h1>Scene Show Page</h1>
-
+<center>
 <hr>
-<p><h5>Name of Scene: </h5> <%= @scene.sceneName %> </p>
-<p><h5>Description: </h5> <%= @scene.description %> </p>
-<p><h5>ID: </h5> <%= @scene.id %> </p>
+<h1>Scene Page</h1>
+<p><h2>Name of Scene:  <%= @scene.sceneName %> </h2></p>
+<p><h3>Description:  <%= @scene.description %> </h7></p>
+
 
 
 <%= link_to "Edit", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/edit",
@@ -15,9 +15,13 @@
 
 <br><br>
 
+<%= link_to "Add a Decision", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
+:class => 'btn btn-primary' %>
+
+<br><br>
 
 <h3>Decisions To Make</h3>
-<div class="well">
+<div class="list-group-item">
 
   <% @scene.decisions.each do |decision| %>
   <hr>
@@ -40,8 +44,7 @@
 
 <hr>
 
-<%= link_to "Add a Decision", "/adventures/" + @scene.adventure_id.to_s + "/scenes/" + @scene.id.to_s + "/decisions/new",
-:class => 'btn btn-primary' %>
+
 
 
 

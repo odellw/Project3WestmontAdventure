@@ -1,7 +1,7 @@
 <br><br>
 <center>
 <h1>Add A New Scene</h1>
-</center>
+
 <div class="container">
 
 <%= form_for :scene, url: adventure_scenes_path do |f| %>
@@ -21,11 +21,12 @@
   <%= f.text_area( :description, {:class => 'form-control'}) %>
 </p>
 
-</div>
-<center>
+
+
 <p>
 <%= f.submit({:class => 'btn btn-primary'}) %>
 </p>
 
 <% end %>
+</div>
 </center>

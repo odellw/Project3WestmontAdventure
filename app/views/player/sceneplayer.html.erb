@@ -1,22 +1,27 @@
-<h1>Play Scene</h1>
 
 <center>
+  <div class="container">
   <br>
-  <strong> <%= @scene.sceneName %>  </strong>
-  <p> <%= @scene.description %> </p>
+  <h2> <strong> <%= @scene.sceneName %>  </strong> </h2>
+  <h4> <%= @scene.description %> </h4>
 
-<h6> What should you do? </h6>
 
-  <ul>
+
     <% @scene.decisions.each do |decision| %>
     <hr>
-    <li><p><%= decision.decisionDescription %> </p> </li>
 
-
-
-    <%= link_to 'Choose this decision', '/player/' + @adventure.id.to_s + '/' + decision.sceneToGoTO.to_s,
+    <%= link_to decision.decisionDescription, '/player/' + @adventure.id.to_s + '/' + decision.sceneToGoTO.to_s,
     :class => 'btn btn-primary'
      %>
 
+</hr>
   <% end %>
-  </ul>
+
+<div align="right">
+  <%= link_to "Back to Main Menu", home_path,
+  :class => 'btn btn-secondary'
+   %>
+   </div>
+
+  </div>
+</center>

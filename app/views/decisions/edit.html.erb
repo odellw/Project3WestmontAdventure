@@ -1,13 +1,12 @@
-<h1>Decision Edit Page</h1>
-
-
-<h3>Edit Decision</h3>
+<center>
+<h2>Edit Decision</h2>
 <h5>
   Context:
   <%=@scene.sceneName %> , <%=@scene.description%>
   </h5>
+</center>
 
-
+<div class="container">
 
 <%= form_for :decision, :url => {:action => "edit", :id => @scene} do |f| %>
   <p>
@@ -15,6 +14,8 @@
     <%= f.text_area(:decisionDescription,
     {:class => 'form-control' }) %>
   </p>
+  </div>
+  <center>
   <p>
     <%= f.label :Scene_to_go_to %><br>
     <%= f.select :sceneToGoTO, options_for_select(@adventure.scenes.collect{ |u| [u.sceneName, u.id] }) %>
@@ -24,3 +25,4 @@
   </p>
 
   <% end %>
+  </center>
