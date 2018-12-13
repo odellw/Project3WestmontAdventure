@@ -28289,3 +28289,762 @@ Processing by ScenesController#show as HTML
 Completed 200 OK in 164ms (Views: 104.6ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/adventures/7/scenes/17/edit" for 127.0.0.1 at 2018-12-12 23:38:56 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScenesController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering scenes/edit.html.erb within layouts/application
+  Rendered scenes/edit.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 263ms (Views: 231.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/adventures/7/scenes/17/edit" for 127.0.0.1 at 2018-12-12 23:39:43 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScenesController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering scenes/edit.html.erb within layouts/application
+  Rendered scenes/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 294ms (Views: 262.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/new" for 127.0.0.1 at 2018-12-12 23:40:09 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 72ms (Views: 55.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/new" for 127.0.0.1 at 2018-12-12 23:40:40 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/21/edit" for 127.0.0.1 at 2018-12-12 23:40:50 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"21"}
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 78ms (Views: 69.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:40:51 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.9ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 63ms (Views: 56.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:40:52 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/7/scenes" for 127.0.0.1 at 2018-12-12 23:40:53 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"7"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSelect * from scenes where adventure_id = 7[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/7" for 127.0.0.1 at 2018-12-12 23:40:54 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:40:55 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.5ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-12 23:40:59 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:41:00 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.6ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/12" for 127.0.0.1 at 2018-12-12 23:41:05 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/adventures/12" for 127.0.0.1 at 2018-12-12 23:41:08 -0800
+Processing by AdventuresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7+kkROlnXV32MMm4bZV0xgQ5pJl4h47mxmkIc3E6VxbPfUrdKFSOnwcdWCcYIbuHW58ihFSENp5MYzPNinFLUg==", "id"=>"12"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 12]]
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 59]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "decisions" WHERE "decisions"."id" = ?[0m  [["id", 98]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "decisions" WHERE "decisions"."id" = ?[0m  [["id", 99]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "decisions" WHERE "decisions"."id" = ?[0m  [["id", 100]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "decisions" WHERE "decisions"."id" = ?[0m  [["id", 101]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "decisions" WHERE "decisions"."id" = ?[0m  [["id", 102]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "scenes" WHERE "scenes"."id" = ?[0m  [["id", 59]]
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 60]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "scenes" WHERE "scenes"."id" = ?[0m  [["id", 60]]
+  [1m[36mDecision Load (0.0ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 61]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "scenes" WHERE "scenes"."id" = ?[0m  [["id", 61]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "adventures" WHERE "adventures"."id" = ?[0m  [["id", 12]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-12 23:41:08 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:41:09 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/14" for 127.0.0.1 at 2018-12-12 23:41:13 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/adventures/14" for 127.0.0.1 at 2018-12-12 23:41:15 -0800
+Processing by AdventuresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XuKr04WDzll3LsdmPJEz4Ju588dDhy2IQmDpuCCfEpZ+dsVKRLAdm4YDVvlJJfyhxB912m+ElfDIatIG29QO0g==", "id"=>"14"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 14]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "adventures" WHERE "adventures"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-12 23:41:15 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:41:16 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adventures/15" for 127.0.0.1 at 2018-12-12 23:41:18 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/adventures/15" for 127.0.0.1 at 2018-12-12 23:41:20 -0800
+Processing by AdventuresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A6c595gyIvLwuUrxdIFvxOuflTYHLvygtsmrNGn7qbkjM1duWQHxMAGU224BNaCFtDkTKystRNg8w5CKkrC1/Q==", "id"=>"15"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 15]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "adventures" WHERE "adventures"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-12 23:41:20 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:41:21 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adventures/11" for 127.0.0.1 at 2018-12-12 23:41:24 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adventures/11/edit" for 127.0.0.1 at 2018-12-12 23:41:31 -0800
+Processing by AdventuresController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAdventure Load (0.4ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering adventures/edit.html.erb within layouts/application
+  Rendered adventures/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adventures/11/scenes" for 127.0.0.1 at 2018-12-12 23:41:33 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"11"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSelect * from scenes where adventure_id = 11[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/11/scenes" for 127.0.0.1 at 2018-12-12 23:42:12 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"11"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 11[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/11/scenes" for 127.0.0.1 at 2018-12-12 23:42:39 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"11"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 11[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adventures/11/scenes" for 127.0.0.1 at 2018-12-12 23:43:00 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"11"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 11[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/11/scenes" for 127.0.0.1 at 2018-12-12 23:43:14 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"11"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSelect * from scenes where adventure_id = 11[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 30.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/11/scenes" for 127.0.0.1 at 2018-12-12 23:43:21 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"11"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.8ms)[0m  [1m[34mSelect * from scenes where adventure_id = 11[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 31.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/11/scenes/38" for 127.0.0.1 at 2018-12-12 23:43:32 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"11", "id"=>"38"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.7ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 38]]
+  Rendered scenes/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/adventures/11/scenes/38/edit" for 127.0.0.1 at 2018-12-12 23:43:44 -0800
+Processing by ScenesController#edit as HTML
+  Parameters: {"adventure_id"=>"11", "id"=>"38"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering scenes/edit.html.erb within layouts/application
+  Rendered scenes/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/11/scenes/38/edit" for 127.0.0.1 at 2018-12-12 23:43:50 -0800
+Processing by ScenesController#edit as HTML
+  Parameters: {"adventure_id"=>"11", "id"=>"38"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering scenes/edit.html.erb within layouts/application
+  Rendered scenes/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/11" for 127.0.0.1 at 2018-12-12 23:43:54 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:43:55 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/13" for 127.0.0.1 at 2018-12-12 23:44:01 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adventures/13/edit" for 127.0.0.1 at 2018-12-12 23:44:03 -0800
+Processing by AdventuresController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering adventures/edit.html.erb within layouts/application
+  Rendered adventures/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/adventures/13" for 127.0.0.1 at 2018-12-12 23:44:41 -0800
+Processing by AdventuresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7X96YxSqn4ERbcI1oGvMvI2LRP8Cla/uqnpz29M3GgPvdiDLkBi357tGJjAoQpVkCpVJlPi0aG2itLu0Wqum3A==", "adventure"=>{"name"=>"Test Adventure", "description"=>"This is a really really really really really really really really really really really really really really really really really really unnecessarily long description.", "creator"=>"someone out there"}, "commit"=>"Save Adventure", "id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "adventures" SET "name" = ?, "description" = ?, "creator" = ?, "updated_at" = ? WHERE "adventures"."id" = ?[0m  [["name", "Test Adventure"], ["description", "This is a really really really really really really really really really really really really really really really really really really unnecessarily long description."], ["creator", "someone out there"], ["updated_at", "2018-12-13 07:44:41.380454"], ["id", 13]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/adventures/13" for 127.0.0.1 at 2018-12-12 23:44:41 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:44:45 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/13/scenes/new" for 127.0.0.1 at 2018-12-12 23:44:46 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:44:55 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WpSfqKDVWYPzjz6J+HqPkIeGVR+LdMNqnH8+3traCCAmM+kryuPl45ODBd5c1uVrnmLL1ppPGH9JDW5jNXxO7Q==", "scene"=>{"sceneName"=>"scene 1", "description"=>"this is s1"}, "commit"=>"Save Scene", "adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "scene 1"], ["description", "this is s1"], ["adventure_id", 13], ["created_at", "2018-12-13 07:44:55.233007"], ["updated_at", "2018-12-13 07:44:55.233007"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:44:55 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 55ms (Views: 48.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/13/scenes/new" for 127.0.0.1 at 2018-12-12 23:44:58 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:45:03 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vO280hLaPjSLnJHTzEFnAuNB5dFpKY7HUJ+dLPX+WRTASspReOyCVOuQqoRo7Q35+qV7GHgSVdKF7c2RGlgf2Q==", "scene"=>{"sceneName"=>"scene 2", "description"=>"this is s2"}, "commit"=>"Save Scene", "adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "scene 2"], ["description", "this is s2"], ["adventure_id", 13], ["created_at", "2018-12-13 07:45:03.707514"], ["updated_at", "2018-12-13 07:45:03.707514"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:45:03 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adventures/13/scenes/new" for 127.0.0.1 at 2018-12-12 23:45:04 -0800
+Processing by ScenesController#new as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering scenes/new.html.erb within layouts/application
+  Rendered scenes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:45:10 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R8BgIiAE3WgiAOScrl1Tl4VjGyGRw0xWI50MRy8u/VM7ZxahSjJhCEIM38sK8TlsnIeF6ID4l0P271z6wIi7ng==", "scene"=>{"sceneName"=>"scene 3", "description"=>"this is s3"}, "commit"=>"Save Scene", "adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "scene 3"], ["description", "this is s3"], ["adventure_id", 13], ["created_at", "2018-12-13 07:45:10.045312"], ["updated_at", "2018-12-13 07:45:10.045312"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:45:10 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:45:11 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/13/scenes/62/decisions/new" for 127.0.0.1 at 2018-12-12 23:45:14 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"13", "scene_id"=>"62"}
+  [1m[36mScene Load (0.7ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 13]]
+  Rendered decisions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 34.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/adventures/13/scenes/62/decisions?id=62" for 127.0.0.1 at 2018-12-12 23:45:20 -0800
+Processing by DecisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpFzLQDeje3RuM39oODB+sbjA2o3j37cJjrVy5GzMETkMs3ogluXiSKAsGUHj7E1PKKFGfWhAI43MclQDryt+Q==", "decision"=>{"decisionDescription"=>"go to 2", "sceneToGoTO"=>"63"}, "commit"=>"Save Decision", "id"=>"62", "adventure_id"=>"13", "scene_id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "decisions" ("decisionDescription", "scene_id", "sceneToGoTO", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["decisionDescription", "go to 2"], ["scene_id", 62], ["sceneToGoTO", 63], ["created_at", "2018-12-13 07:45:20.557792"], ["updated_at", "2018-12-13 07:45:20.557792"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes/62
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:45:20 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adventures/13/scenes/62/decisions/new" for 127.0.0.1 at 2018-12-12 23:45:23 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"13", "scene_id"=>"62"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 13]]
+  Rendered decisions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/adventures/13/scenes/62/decisions?id=62" for 127.0.0.1 at 2018-12-12 23:45:27 -0800
+Processing by DecisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jimux9oBoaXdKcPmrFPWqViOQ2eMbSqv4+0mEvmQdZcoihACWIS7wS4Rvn4LPKZmos/FFE5DVP3y5jqJZp/oKg==", "decision"=>{"decisionDescription"=>"go to 3", "sceneToGoTO"=>"64"}, "commit"=>"Save Decision", "id"=>"62", "adventure_id"=>"13", "scene_id"=>"62"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "decisions" ("decisionDescription", "scene_id", "sceneToGoTO", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["decisionDescription", "go to 3"], ["scene_id", 62], ["sceneToGoTO", 64], ["created_at", "2018-12-13 07:45:27.961045"], ["updated_at", "2018-12-13 07:45:27.961045"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes/62
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:45:27 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 56ms (Views: 48.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/13/scenes/62/decisions/new" for 127.0.0.1 at 2018-12-12 23:45:29 -0800
+Processing by DecisionsController#new as HTML
+  Parameters: {"adventure_id"=>"13", "scene_id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering decisions/new.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 13]]
+  Rendered decisions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/adventures/13/scenes/62/decisions?id=62" for 127.0.0.1 at 2018-12-12 23:45:33 -0800
+Processing by DecisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NdlbSAXPRZtPF/g5eAi2ORpEjPBPs7OY6P8cwQvZL8OTeuWNh0pf/7wvhaHfZ8b24AUKg42dzcr59ABalNayfg==", "decision"=>{"decisionDescription"=>"stay on 1", "sceneToGoTO"=>"62"}, "commit"=>"Save Decision", "id"=>"62", "adventure_id"=>"13", "scene_id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "decisions" ("decisionDescription", "scene_id", "sceneToGoTO", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["decisionDescription", "stay on 1"], ["scene_id", 62], ["sceneToGoTO", 62], ["created_at", "2018-12-13 07:45:33.608509"], ["updated_at", "2018-12-13 07:45:33.608509"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes/62
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:45:33 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 48ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adventures/13/scenes/62/decisions/105/edit" for 127.0.0.1 at 2018-12-12 23:45:35 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"13", "scene_id"=>"62", "id"=>"105"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 13]]
+  Rendered decisions/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 56ms (Views: 46.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/adventures/13/scenes/62/decisions/105/edit" for 127.0.0.1 at 2018-12-12 23:45:39 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vL1pQavSypbZF5mJ+7/ywoV9bdOgPJoONCvQ9Qqyofpg4oGIVVcyY0BsIhdwvajfdnf4KvaHPXx5kn90AfPIQA==", "decision"=>{"decisionDescription"=>"stay here on 1", "sceneToGoTO"=>"62"}, "commit"=>"Save Decision", "adventure_id"=>"13", "scene_id"=>"62", "decision_id"=>"105"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "decisions" SET "decisionDescription" = ?, "updated_at" = ? WHERE "decisions"."id" = ?[0m  [["decisionDescription", "stay here on 1"], ["updated_at", "2018-12-13 07:45:39.638086"], ["id", 105]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes/62
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:45:39 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/adventures/13/scenes/62/edit" for 127.0.0.1 at 2018-12-12 23:45:49 -0800
+Processing by ScenesController#edit as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering scenes/edit.html.erb within layouts/application
+  Rendered scenes/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:45:59 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AucWEqBr7s7tnV21Zr2sHjRbMUmiwZT3GRzcQAEp9KN+QGCRyl1Sro2RZuLCEcblLb+vgLP6T+LMboz97o+ybg==", "scene"=>{"sceneName"=>"scene 1", "description"=>"this is s1."}, "commit"=>"Save Scene", "adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "scene 1"], ["description", "this is s1."], ["adventure_id", 13], ["created_at", "2018-12-13 07:45:59.400498"], ["updated_at", "2018-12-13 07:45:59.400498"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:45:59 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 49ms (Views: 41.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:46:07 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/13/scenes/62/edit" for 127.0.0.1 at 2018-12-12 23:46:11 -0800
+Processing by ScenesController#edit as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering scenes/edit.html.erb within layouts/application
+  Rendered scenes/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 48ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:46:15 -0800
+Processing by ScenesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQRCXdvbfleYnYR2t0zsqzOwmqKBEz44uElN1lsks5xVozTese3CN/iRvyET4IZQKlQEa5Ao5S1tOx1rtIL1UQ==", "scene"=>{"sceneName"=>"scene 1", "description"=>"this is s1 here"}, "commit"=>"Save Scene", "adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "scenes" ("sceneName", "description", "adventure_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sceneName", "scene 1"], ["description", "this is s1 here"], ["adventure_id", 13], ["created_at", "2018-12-13 07:46:15.033307"], ["updated_at", "2018-12-13 07:46:15.033307"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/adventures/13/scenes
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:46:15 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adventures/13/scenes/62" for 127.0.0.1 at 2018-12-12 23:46:33 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"13", "id"=>"62"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 62]]
+  Rendered scenes/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/13/scenes" for 127.0.0.1 at 2018-12-12 23:46:42 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSelect * from scenes where adventure_id = 13[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 36.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/13" for 127.0.0.1 at 2018-12-12 23:46:46 -0800
+Processing by AdventuresController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering adventures/show.html.erb within layouts/application
+  Rendered adventures/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adventures" for 127.0.0.1 at 2018-12-12 23:46:47 -0800
+Processing by AdventuresController#index as HTML
+  Rendering adventures/index.html.erb within layouts/application
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT "adventures".* FROM "adventures"[0m
+  Rendered adventures/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-12 23:46:48 -0800
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
