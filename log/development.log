@@ -27507,3 +27507,360 @@ Processing by AdventuresController#index as HTML
 Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:15:44 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 237ms (Views: 217.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:15:49 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.6ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 79ms (Views: 61.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:15:51 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P5ifl4ywwR71j1AbpJSZ+3uPt5XeEtzJKR0RQVY2cQUEp5/OBjTqiQPrv+FP0fqKB9fUOup4LKrCB0yRswgx7g==", "decision"=>{"decisionDescription"=>"go?", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:17:24 -0800
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:17:34 -0800
+Started GET "/adventures/7/scenes" for 127.0.0.1 at 2018-12-12 23:17:34 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 56ms (Views: 31.1ms | ActiveRecord: 2.0ms)
+
+
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"7"}
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSelect * from scenes where adventure_id = 7[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 27.6ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 152ms (Views: 124.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:17:37 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.5ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:17:38 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 42ms (Views: 33.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:17:41 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Esig8U6OS8tMdhMZSdCJ2LeW4W/Vpn4e+1UrrovsglEp96CoxApgXLoS/OOileqpy86CwOHMjn0QT3Z+btLCug==", "decision"=>{"decisionDescription"=>"go??", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:18:04 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:18:11 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 40ms (Views: 33.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:18:21 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 32.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/adventures/7/scenes" for 127.0.0.1 at 2018-12-12 23:18:28 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"7"}
+  [1m[36mAdventure Load (0.3ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSelect * from scenes where adventure_id = 7[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:18:33 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:19:02 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 50ms (Views: 33.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:19:06 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 53ms (Views: 32.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:19:09 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GySWEHXJkOAy/ttVF5ueUBbwmE6wbopKhNYaqrDhtGwgG5ZJ/027d8SaNK/83v0haqj74YQEeilvzEd6Vd/0hw==", "decision"=>{"decisionDescription"=>"go?", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:19:43 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 69ms (Views: 41.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:19:49 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SnGj9v28BqOxoDxawIgujpjIs9PO+dq6OLhK/S5kzQdq5c1vPI/VYUCNrcW1POHPx241zuL6YsKysnFD1S/RQw==", "decision"=>{"decisionDescription"=>"go???????", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:20:41 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 55ms (Views: 28.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:20:47 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E81Yb3Apa6FU+iSwM9bWGIWeZJHa5ukU1l0OcVonSQ4zWTb2sRq4Y6XXtS9GYhlZ2jjijPblUWxcVzXPoWxVSg==", "decision"=>{"decisionDescription"=>"go .........", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:21:06 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 81ms (Views: 48.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:21:12 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSEPkSkrkQPQVBWf3lM2GcyEfdsDGbsFMr9oZFq9Y+61tWEI6BhCwSF5hACr5/lYkyL7xi8aA324tVPaofZ/qg==", "decision"=>{"decisionDescription"=>"go ok", "sceneToGoTO"=>"19"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes" for 127.0.0.1 at 2018-12-12 23:21:19 -0800
+Processing by ScenesController#index as HTML
+  Parameters: {"adventure_id"=>"7"}
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSelect * from scenes where adventure_id = 7[0m
+  Rendering scenes/index.html.erb within layouts/application
+  Rendered scenes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/7/scenes/17" for 127.0.0.1 at 2018-12-12 23:21:21 -0800
+Processing by ScenesController#show as HTML
+  Parameters: {"adventure_id"=>"7", "id"=>"17"}
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering scenes/show.html.erb within layouts/application
+  [1m[36mDecision Load (0.3ms)[0m  [1m[34mSELECT "decisions".* FROM "decisions" WHERE "decisions"."scene_id" = ?[0m  [["scene_id", 17]]
+  Rendered scenes/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:21:26 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:22:09 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:22:16 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+kMEzWfs/Pn6AnpbdIVybiHS+nMM9LyAtaFot/szPLza12pUpt8vOwsv68QBMb0vfnR8biD3BPg/q1MJAHgg+A==", "decision"=>{"decisionDescription"=>"go plz", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:22:33 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.2ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.1ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:22:38 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ze2PuPeRy3IsYIkSk69lCYm1ST40crjT8/TChHq8ZsVFeeEhNqIYsN1NGI3mG6pI1hPPIxhxAKt5/vk6gfd6gQ==", "decision"=>{"decisionDescription"=>"go plzz", "sceneToGoTO"=>"19"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started GET "/adventures/7/scenes/17/decisions/20/edit" for 127.0.0.1 at 2018-12-12 23:23:47 -0800
+Processing by DecisionsController#edit as HTML
+  Parameters: {"adventure_id"=>"7", "scene_id"=>"17", "id"=>"20"}
+  [1m[36mDecision Load (0.1ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT  "scenes".* FROM "scenes" WHERE "scenes"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mAdventure Load (0.1ms)[0m  [1m[34mSELECT  "adventures".* FROM "adventures" WHERE "adventures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering decisions/edit.html.erb within layouts/application
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."adventure_id" = ?[0m  [["adventure_id", 7]]
+  Rendered decisions/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/adventures/7/scenes/17/decisions/17/edit" for 127.0.0.1 at 2018-12-12 23:23:51 -0800
+Processing by DecisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s/A8LbxmKeqp60q8AugRq8SQDriR2wRFt0RdiSKbzPaTZFK0fVX6KFjG2yN3XN7qmzaIpb3YvD09TmY32dDQsg==", "decision"=>{"decisionDescription"=>"gooooo", "sceneToGoTO"=>"17"}, "commit"=>"Save Decision", "adventure_id"=>"7", "scene_id"=>"17", "decision_id"=>"17"}
+  [1m[36mDecision Load (0.2ms)[0m  [1m[34mSELECT  "decisions".* FROM "decisions" WHERE "decisions"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Decision with 'id'=17):
+  
+app/controllers/decisions_controller.rb:48:in `update'
+Started POST "/__web_console/repl_sessions/a052eeb0866b842bdd7911a5803b975e/trace" for 127.0.0.1 at 2018-12-12 23:24:28 -0800

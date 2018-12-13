@@ -7,10 +7,9 @@
   </div>
 </center>
 
-
+<div class="container">
 
 <%= form_for :decision, :url => {:action => "edit", :id => @scene} do |f| %>
-<div class="container">
   <p>
     <%= f.label :Decision_description %><br>
     <%= f.text_area(:decisionDescription,
