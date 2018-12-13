@@ -45,10 +45,9 @@ class DecisionsController < ApplicationController
   end
 
   def update
-    @scene = Scene.find(params[:scene_id])
     @Decision = Decision.find(params[:decision_id])
     if(@Decision.update(decision_params))
-      redirect_to adventure_scenes_path + "/" + @scene.id.to_s
+      redirect_to @decision
     else
       render 'new'
     end
